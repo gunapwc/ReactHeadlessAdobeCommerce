@@ -1,0 +1,27 @@
+// Spacing
+$spaceamounts: (0, 5, 10, 12, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100,); // Adjust this to include the pixel amounts you need.
+$sides: (top, bottom, left, right); // Leave this variable alone
+
+@each $space in $spaceamounts {
+    @each $side in $sides {
+        .m-#{str-slice($side, 0, 1)}#{$space} {
+            margin-#{$side}: #{$space}px !important;
+        }
+
+        .p-#{str-slice($side, 0, 1)}#{$space} {
+            padding-#{$side}: #{$space}px !important;
+        }
+    }
+}
+
+
+
+
+// heights property
+$sizesofheight: 10px, 15px, 20px, 25px, 30px, 35px, 40px, 45px, 50px, 55px, 60px, 65px, 70px, 75px, 80px;
+
+@each $size in $sizesofheight {
+    .h-#{$size} {
+        height: $size;
+    }
+}
