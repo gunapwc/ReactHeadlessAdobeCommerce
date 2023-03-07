@@ -101,7 +101,7 @@ function Header() {
                     <Link class="nav-link"><span>Category</span></Link>
                     <Link class="nav-link"><span>Brand</span></Link>
                     <Link class="nav-link"><span>Offer</span></Link>
-                    <Link class="nav-link"><span>Track My Order</span></Link>
+                    <Link class="nav-link" to={'/track-order'}><span>Track My Order</span></Link>
                     <Link class="nav-link"><span>Clearance Sale</span></Link>
 
                 </nav>
