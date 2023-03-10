@@ -24,16 +24,17 @@ $gray: #ddd;
     outline: none !important;
 
 }
-body{
+
+body {
     font-family: LatoRegular;
 
 }
 
-.widget{
+.widget {
     clear: both;
 }
 
-.block{
+.block {
     margin-bottom: 50px;
 }
 
@@ -88,7 +89,7 @@ img {
 }
 
 
-ul{
+ul {
     list-style: none;
 }
 
@@ -103,7 +104,7 @@ a {
     // margin-left: 2px;
 }
 
-.cursorP{
+.cursorP {
     cursor: pointer;
 }
 
@@ -122,4 +123,82 @@ a {
     // margin: 0 auto;
     // position: fixed !important;
 
+}
+
+.PDP {
+    display: flex;
+    flex-direction: column;
+}
+
+.PDP-info {
+    display: flex;
+    flex-direction: row;
+    padding-left: 15%;
+}
+
+.PDP-detail {
+    display: flex;
+    padding-left: 4%;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+
+    h1 {
+        color: #21419A;
+    }
+
+    input {
+        margin-top: 5%;
+        border: solid;
+        border-color: #00b18f;
+        border-radius: 2%;
+        padding: 3%;
+    }
+}
+
+.PDP-button-align {
+    display: flex;
+    width: 100%;
+    align-items: end;
+    padding: 10%;
+
+    button {
+        border: solid;
+        border-color: #00b18f;
+        padding:  0% 10% 0% 10%;
+        border-radius: 5%;
+    }
+}
+
+.PLP-suggestions {
+    display: flex;
+    width: 100%;
+    
+
+
+}
+
+.PLP-card {
+    width: 300px;
+    margin: 5%;
+    z-index: 1;
+    box-shadow: inset;
+    background-color: #ddd;
+    img {
+        width: 100%;
+    }
+}
+
+.PLP-button-align {
+    width: 100%;
+    display: flex;
+    align-items: end;
+    padding: 10%;
+
+    button {
+        border: solid;
+        border-color: #00b18f;
+        padding:  0% 10% 0% 10%;
+        border-radius: 5%;
+    }
 }

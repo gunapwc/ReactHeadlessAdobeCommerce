@@ -8,6 +8,7 @@ import "owl.carousel/dist/assets/owl.theme.default.css";
 import Footer from "./footer";
 // import Apphome from "./homepagecomp/Apphome";
 import { TrackMyOrder } from "./pages/trackmyorder";
+import ProductDetailPage from "./ProductDetailPage/productDetailpage";
 
 const Homepage = React.lazy(() => import("./homepagecomp/Apphome"));
 
@@ -18,9 +19,10 @@ function App() {
         <Header />
 
         <Routes>
-          
+
           <Route exact path="/" element={<Homepage />} />
           <Route path='/track-order' element={<TrackMyOrder/>}/>
+          <Route path='/product-detail-page' element = {<ProductDetailPage/>} />
         </Routes>
 
         <Footer />
