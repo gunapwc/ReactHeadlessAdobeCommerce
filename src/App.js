@@ -9,6 +9,7 @@ import Footer from "./footer";
 // import Apphome from "./homepagecomp/Apphome";
 import { TrackMyOrder } from "./pages/trackmyorder";
 import ProductDetailPage from "./ProductDetailPage/productDetailpage";
+import CartPage from "./CartPage/cartPage";
 
 const Homepage = React.lazy(() => import("./homepagecomp/Apphome"));
 
@@ -23,6 +24,7 @@ function App() {
           <Route exact path="/" element={<Homepage />} />
           <Route path='/track-order' element={<TrackMyOrder/>}/>
           <Route path='/product-detail-page' element = {<ProductDetailPage/>} />
+          <Route path="/cart-page" element = { <CartPage/>}/>
         </Routes>
 
         <Footer />

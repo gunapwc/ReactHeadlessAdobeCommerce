@@ -165,7 +165,7 @@ a {
     button {
         border: solid;
         border-color: #00b18f;
-        padding:  0% 10% 0% 10%;
+        padding: 0% 10% 0% 10%;
         border-radius: 5%;
     }
 }
@@ -173,7 +173,7 @@ a {
 .PLP-suggestions {
     display: flex;
     width: 100%;
-    
+
 
 
 }
@@ -184,6 +184,7 @@ a {
     z-index: 1;
     box-shadow: inset;
     background-color: #ddd;
+
     img {
         width: 100%;
     }
@@ -198,7 +199,70 @@ a {
     button {
         border: solid;
         border-color: #00b18f;
-        padding:  0% 10% 0% 10%;
+        padding: 0% 10% 0% 10%;
         border-radius: 5%;
+    }
+}
+
+.cart-card-detail {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+}
+
+.cart-card {
+    display: flexbox;
+    margin: 2% 1% 2% 1%;
+    box-shadow: 1px 1px 1px 1px  rgb(48, 47, 47);
+    flex-direction: column;
+    width: 100%;
+}
+
+.cart {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.cart-header {
+    width: 70%;
+    text-align: center;
+}
+
+.cart-list {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+
+}
+
+.cart-detail {
+    display: block;
+    padding: 3%;
+    block-size: 30%;
+    box-shadow: 1px 1px 1px 1px  rgb(48, 47, 47);
+    justify-content: center;
+    text-align: start;
+}
+.cart-root{
+    display: block;
+    margin: 2.5%;
+    padding: 2.5%;
+    block-size: 30%;
+    box-shadow:  2px 2px 2px 2px  rgb(48, 47, 47);
+}
+
+.button-div {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    padding-right: 20%;
+    margin: 2%;
+
+    button {
+        border: solid;
+        border-color: #00b18f;
+        padding: 1% 10% 1% 10%;
+        border-radius: 15px;
     }
 }
