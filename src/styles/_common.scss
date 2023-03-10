@@ -133,7 +133,9 @@ a {
 .PDP-info {
     display: flex;
     flex-direction: row;
-    padding-left: 15%;
+    padding: 5% 15% 5% 15%;
+    box-shadow: 1px 1px 1px 1px #000000;
+
 }
 
 .PDP-detail {
@@ -151,7 +153,7 @@ a {
         margin-top: 5%;
         border: solid;
         border-color: #00b18f;
-        border-radius: 2%;
+        border-radius: 15px;
         padding: 3%;
     }
 }
@@ -166,7 +168,7 @@ a {
         border: solid;
         border-color: #00b18f;
         padding:  0% 10% 0% 10%;
-        border-radius: 5%;
+        border-radius: 5px;
     }
 }
 
@@ -182,7 +184,7 @@ a {
     width: 300px;
     margin: 5%;
     z-index: 1;
-    box-shadow: inset;
+    box-shadow: 1px 1px 1px 1px rgb(47,47,47);
     background-color: #ddd;
     img {
         width: 100%;
@@ -199,6 +201,6 @@ a {
         border: solid;
         border-color: #00b18f;
         padding:  0% 10% 0% 10%;
-        border-radius: 5%;
+        border-radius: 5px;
     }
 }
