@@ -25,7 +25,7 @@ function App() {
         <Routes>
 
           <Route exact path="/" element={<Homepage />} />
-          <Route path='/track-order' element={<TrackMyOrder/>
+          <Route path='/track-order' element={<TrackMyOrder/>}/>
           <Route path='/product-detail-page' element = {<ProductDetailPage/>} />
           <Route path="/cart-page" element = { <CartPage/>}/>
           <Route path='/product-list' element={<ProductListpage/>}/>
