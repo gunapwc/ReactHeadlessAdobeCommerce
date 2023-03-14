@@ -133,14 +133,15 @@ a {
 .PDP-info {
     display: flex;
     flex-direction: row;
-    padding: 5% 15% 5% 15%;
+    padding: 5%;
     box-shadow: 1px 1px 1px 1px #000000;
 
 }
 
 .PDP-detail {
     display: flex;
-    padding-left: 4%;
+    margin-top: 2%;
+    padding-left: 10%;
     flex-direction: column;
     align-items: start;
     justify-content: center;
@@ -148,7 +149,12 @@ a {
     h1 {
         color: #21419A;
     }
-
+    h2{
+        color: #00b18f;
+        margin: 4%;
+        padding: 2%;
+        font-size: medium;
+    }
     input {
         margin-top: 5%;
         border: solid;
@@ -156,17 +162,25 @@ a {
         border-radius: 15px;
         padding: 3%;
     }
+    p{
+        width: 40%
+    }
+    .quantity{
+        margin: 4%;
+    }
 }
 
 .PDP-button-align {
     display: flex;
     width: 100%;
-    align-items: end;
+    justify-content: center;
     padding: 10%;
 
     button {
         border: solid;
         border-color: #00b18f;
+        background-color: #00b18f;
+        color: #ffffff;
         padding:  0% 10% 0% 10%;
         border-radius: 5px;
     }
@@ -181,25 +195,37 @@ a {
 }
 
 .PLP-card {
-    width: 300px;
-    margin: 5%;
+    width: 100%;
+    margin: 3%;
     z-index: 1;
-    box-shadow: 1px 1px 1px 1px rgb(47,47,47);
+    text-align: center;
+    box-shadow: 1px 1px 1px 0px rgb(47,47,47);
     background-color: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
     img {
         width: 100%;
     }
 }
-
+.PDP-img-selection{
+    display: flex;
+    flex-direction: column;
+    margin: 2%;
+    img{
+        margin: 15%;
+    }
+}
 .PLP-button-align {
     width: 100%;
     display: flex;
-    align-items: end;
+    justify-content: center;
     padding: 10%;
 
     button {
         border: solid;
         border-color: #00b18f;
+        background-color: #00b18f;
+        color: #ffffff;
         padding:  0% 10% 0% 10%;
         border-radius: 5px;
     }
@@ -209,13 +235,22 @@ a {
     display: flex;
     justify-content: space-evenly;
     flex-direction: row;
+    h1{
+        color:#00b18f
+    }
 }
 
 .cart-card {
     display: flexbox;
     margin: 2% 1% 2% 1%;
-    box-shadow: 1px 1px 1px 1px  rgb(48, 47, 47);
     flex-direction: column;
+    width: 100%;
+}
+.cart-card-root {
+    display: flex;
+    margin: 2% 1% 2% 1%;
+    border: ridge;
+    flex-direction: row;
     width: 100%;
 }
 
@@ -223,6 +258,7 @@ a {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    border:ridge;
 }
 
 .cart-header {
@@ -240,30 +276,62 @@ a {
 .cart-detail {
     display: block;
     padding: 3%;
+    margin-top: 3%;
     block-size: 30%;
-    box-shadow: 1px 1px 1px 1px  rgb(48, 47, 47);
+    border: ridge;
     justify-content: center;
-    text-align: start;
+    text-align: center;
+    
 }
 .cart-root{
     display: block;
     margin: 2.5%;
+    margin-top: 0%;
     padding: 2.5%;
     block-size: 30%;
-    box-shadow:  2px 2px 2px 2px  rgb(48, 47, 47);
+    text-align: center;
+    h1{
+        
+        color: #21419A;
+    }
 }
 
 .button-div {
     width: 100%;
     display: flex;
-    justify-content: end;
-    padding-right: 20%;
-    margin: 2%;
+    justify-content: center;
+    margin-top: 10%;
 
     button {
         border: solid;
         border-color: #00b18f;
+        background-color: #00b18f;
+        color: #ffffff;
         padding: 1% 10% 1% 10%;
         border-radius: 15px;
+    }
+}
+
+.quantity{
+    display:flex;
+    flex-direction: row-reverse;
+    border:solid;
+    width: 100px;
+    border-color: #00b18f;
+    border-radius: 5px;
+    overflow: hidden;
+    button{
+        width: 33%;
+        border: #000000;
+        margin: 2%;
+        font-size: medium;
+        color: #ffffff;
+        background-color: #00b18f;
+    }
+    input{
+        width: 33%;
+        border-radius: 0%;
+        border:none;
+        text-align: center;
     }
 }
