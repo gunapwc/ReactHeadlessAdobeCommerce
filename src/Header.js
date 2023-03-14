@@ -78,7 +78,7 @@ function Header() {
                             </ul>
                             {/* </Link> */}</div>
 
-                        <Link to="">
+                        <Link to={'/check-out'}>
 
                             <div className='mycart'>
                                 <img src={Cart} alt="Cart" />
@@ -86,7 +86,7 @@ function Header() {
                                     <li><span className='text'> My Cart  </span> </li>
                                     <li> <span className='cart-count'>AED <span> 0 </span> </span></li>
                                 </ul>
-                                <span className='cart-qty'> 0</span>
+                                <span className='cart-qty'> 2</span>
                             </div>
                         </Link>
 
@@ -100,8 +100,10 @@ function Header() {
                     <Link class="nav-link"><span>Best Seller</span></Link>
                     <Link class="nav-link"><span>Category</span></Link>
                     <Link class="nav-link"><span>Brand</span></Link>
-                    <Link class="nav-link"><span>Offer</span></Link>
-                    <Link class="nav-link" to={'/track-order'}><span>Track My Order</span></Link>
+                    <Link class="nav-link" ><span>Offer</span></Link>
+                    {/* to={'/product-list'} */}
+                    <Link class="nav-link" to={'/order-summary'}><span>Track My Order</span></Link>
+                    {/* to={'/track-order'} */}
                     <Link class="nav-link"><span>Clearance Sale</span></Link>
 
                 </nav>

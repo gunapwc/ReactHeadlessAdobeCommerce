@@ -10,6 +10,9 @@ import Footer from "./footer";
 import { TrackMyOrder } from "./pages/trackmyorder";
 import ProductDetailPage from "./ProductDetailPage/productDetailpage";
 import CartPage from "./CartPage/cartPage";
+import {ProductListpage} from "./pages/sampledemo";
+import { Checkout } from "./pages/checkout";
+import Ordersummary from "./pages/ordersummary";
 
 const Homepage = React.lazy(() => import("./homepagecomp/Apphome"));
 
@@ -22,9 +25,12 @@ function App() {
         <Routes>
 
           <Route exact path="/" element={<Homepage />} />
-          <Route path='/track-order' element={<TrackMyOrder/>}/>
+          <Route path='/track-order' element={<TrackMyOrder/>
           <Route path='/product-detail-page' element = {<ProductDetailPage/>} />
           <Route path="/cart-page" element = { <CartPage/>}/>
+          <Route path='/product-list' element={<ProductListpage/>}/>
+          <Route path='/check-out' element={<Checkout/>}/>
+          <Route path='/order-summary' element={<Ordersummary/>}/>
         </Routes>
 
         <Footer />
