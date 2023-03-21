@@ -1,12 +1,32 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../styles/_common.scss";
 import "../styles/_spacing.scss";
 import "../styles/Style.scss";
-import img from "./xretail6_02.jpg.pagespeed.ic.XP0T-m8rXz.webp"
-import Quantity from "../qunatity/quantity";
+import { useSelector, useDispatch } from "react-redux";
+import { incrementQunatityCart } from "../redux/counterSlice";
+import CartTile from "../cart tile/cartTile";
 
 
 const CartPage = () => {
+    const Dispatch = useDispatch();
+    // const Selector = useSelector();
+
+    const state1 = useSelector(state => state.cart.data);
+    const [data1, setData1] = useState([]);
+    useEffect(() => {
+        setData1(state1);
+    }, [state1]);
+    console.log(state1);
+    const updateQuantity = (index, value) => {
+        let data = structuredClone(data1[index]);
+        console.log(data);
+
+        data.product_quantity = value;
+        // debugger;
+        Dispatch(incrementQunatityCart(data));
+        window.location.reload();
+
+    }
     const [array, setarray] = useState([1, 2, 3])
     return (
         <div className="cart-root">
@@ -17,27 +37,9 @@ const CartPage = () => {
                     <div className="cart-header">
                         <h1>Cart Summery</h1>
                     </div>
-                    {array.map(() => {
+                    {data1.map((value, index) => {
                         return (
-                            <div className="cart-card-root">
-                                <img src={img} width="100px"></img>
-                                <div className="cart-card">
-                                    <div className="cart-card-detail">
-                                        <h3>Product Name</h3>
-                                        <h3>Price</h3>
-                                        <h3>Quantity</h3>
-                                    </div>
-                                    <div className="cart-card-detail">
-                                        <h1>Any Medicine</h1>
-                                        <h1>_Price_</h1>
-                                        <Quantity></Quantity>
-                                    </div>
-                                    <div className="cart-card-detail">
-
-
-                                    </div>
-                                </div>
-                            </div>
+                            <CartTile valuecart={value} updatesquantity={(value1) => { updateQuantity(index, value1) }}/>
                         )
                     })}
                 </div>

@@ -1,11 +1,15 @@
-import React,{useState} from 'react';
-import { Switch, Route, NavLink, Link, Redirect } from "react-router-dom";
+import React, { useState, useEffect } from 'react';
+import { Switch, Route, NavLink, Link, Redirect, useNavigate } from "react-router-dom";
 import Logo from "./Assets/images/aster-online-pharmacy-logo.svg"; // Path to your logo.svg
 import Logo2 from "./Assets/images/Aster_Secure_Logo.svg"; // Path to your logo.svg
 import Profile from "./Assets/images/icon/Profile.svg";
 import Cart from "./Assets/images/icon/Cart.svg";
+import { useDispatch, useSelector } from 'react-redux';
+import { incrementQunatityCart } from './redux/counterSlice';
 
 import Select from 'react-select';
+import CartTile from './cart tile/cartTile';
+import CartTileFixed from './cart tile/cartTileFixed';
 
 const options = [
     { value: 'All Categories', label: 'All Categories' },
@@ -20,23 +24,54 @@ const options = [
 
 
 function Header() {
-    const [Close, setClose] =React.useState(true)
-    const [selectedOption, setSelectedOption] = useState(null);
+    const [Close, setClose] = React.useState(true)
+    const state1 = useSelector(state => state.cart.data);
+    const Dispatch = useDispatch();
+    const [data1, setData1] = useState([]);
+    const Navigate = useNavigate();
+    useEffect(() => {
+        setData1(state1);
+        document.addEventListener('click', handleClickOutside, true);
+    }, [state1]);
+    const updateQuantity = (index, value) => {
+        let data = structuredClone(data1[index]);
+        console.log(data);
 
+        data.product_quantity = value;
+        // debugger;
+        Dispatch(incrementQunatityCart(data));
+        window.location.reload();
+    }
+    const [selectedOption, setSelectedOption] = useState(null);
+    const cartDilog = () => {
+
+        let dialog = document.getElementsByClassName('cart-dialog')
+        document.addEventListener('click', handleClickOutside, true);
+        dialog[0].attributes[0].ownerElement.hidden = !dialog[0].attributes[0].ownerElement.hidden;
+
+    };
+    const handleClickOutside = (value) =>{
+        let dialog = document.getElementsByClassName('cart-dialog')
+        if(value.target.classList!="cart-dialog"&&value.target.offsetParent.classList!="cart-dialog" )
+        dialog[0].attributes[0].ownerElement.hidden = true;
+    }
+    const handleCartClick = () => {
+        Navigate("../cart-page")
+    }
     const onClose = () => {
         setClose(false)
     }
 
     return (
         <header>
-                  { Close ? 
+            {Close ?
 
-            <div className="offermessage">
-                <div className="messages">Shop For AED 199 & Get Extra 10% Off*. Code: EXTRA10.*T&C </div>
+                <div className="offermessage">
+                    <div className="messages">Shop For AED 199 & Get Extra 10% Off*. Code: EXTRA10.*T&C </div>
 
-                <label class="close-header-top-ads cursorP" onClick={onClose}></label>
-            </div>
-             : false }
+                    <label class="close-header-top-ads cursorP" onClick={onClose}></label>
+                </div>
+                : false}
 
             <div className='header-container'>
                 <navbar className="navhead">
@@ -48,7 +83,7 @@ function Header() {
                     </div>
 
                     <div className="searchsec">
-                        
+
                         <Select
                             defaultValue={selectedOption}
                             onChange={setSelectedOption}
@@ -78,17 +113,15 @@ function Header() {
                             </ul>
                             {/* </Link> */}</div>
 
-                        <Link to={'/check-out'}>
 
-                            <div className='mycart'>
-                                <img src={Cart} alt="Cart" />
-                                <ul>
-                                    <li><span className='text'> My Cart  </span> </li>
-                                    <li> <span className='cart-count'>AED <span> 0 </span> </span></li>
-                                </ul>
-                                <span className='cart-qty'> 2</span>
-                            </div>
-                        </Link>
+                        <div className='mycart' onClick={cartDilog}>
+                            <img src={Cart} alt="Cart" />
+                            <ul>
+                                <li><span className='text'> My Cart  </span> </li>
+                                <li> <span className='cart-count'>AED <span> 0 </span> </span></li>
+                            </ul>
+                            <span className='cart-qty'> 2</span>
+                        </div>
 
                     </div>
 
@@ -107,6 +140,27 @@ function Header() {
                     <Link class="nav-link"><span>Clearance Sale</span></Link>
 
                 </nav>
+            </div>
+            <div className='cart-dialog' hidden={true}>
+                <div>
+                    <div className='root-div'>
+                        <ul>
+                            {data1.map((value, index) => {
+                                return (
+                                    <li>
+                                        {/* <CartTile valuecart={value} updatesquantity={(value1) => { updateQuantity(index, value1) }} ></CartTile>
+                                         */}
+                                         <CartTileFixed valuecart={value}></CartTileFixed>
+                                    </li>
+                                )
+                            })}
+                        </ul>
+                    </div>
+                    <div className='button-div1'>
+                        <button onClick={handleCartClick}>Go to Cart</button>
+                    </div>
+
+                </div>
             </div>
         </header>
     )
