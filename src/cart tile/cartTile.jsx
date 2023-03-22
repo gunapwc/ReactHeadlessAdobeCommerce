@@ -10,18 +10,23 @@ const CartTile = ({valuecart,updatesquantity}) => {
             </div>
             <div className="cart-card">
                 <div className="cart-card-detail">
+                    <div>
                     <h3>Product Name</h3>
+                    <h2>{valuecart.product_name}</h2>
+                    </div>
+                    <div>
                     <h3>Price</h3>
-                    <h3>Quantity</h3>
-                </div>
-                <div className="cart-card-detail">
-                    <h1>{valuecart.product_name}</h1>
                     <h2>{valuecart.product_price}</h2>
+                    </div>
+                    <div>
+                    <h3>Quantity</h3>
                     <Quantity value={valuecart.product_quantity} updateValue={(value) => { updatesquantity(value) }}></Quantity>
-                </div>
-                <div className="cart-card-detail">
-
-
+                    </div>
+                    <div>
+                    <h3>Sub-Total</h3>
+                    <h2>{valuecart.product_price*valuecart.product_quantity}</h2>
+                    </div>
+                    
                 </div>
             </div>
         </div>

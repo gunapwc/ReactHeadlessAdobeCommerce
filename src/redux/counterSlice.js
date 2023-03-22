@@ -4,7 +4,7 @@ export const CartSlice = createSlice({
   name: 'cart',
   initialState: {data:[
     {
-      product_name: "Anythy Medicine ",
+      product_name: "Anythy Medicine",
       product_description: "Lower Gypsem text any text  Lower Gypsem text any text Lower Gypsem text any text Lower Gypsem text any text Lower Gypsem text any text Lower Gypsem text any text",
       product_quantity: 1,
       product_price: 100

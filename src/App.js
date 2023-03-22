@@ -13,6 +13,7 @@ import CartPage from "./CartPage/cartPage";
 import {ProductListpage} from "./pages/sampledemo";
 import { Checkout } from "./pages/checkout";
 import Ordersummary from "./pages/ordersummary";
+import OrderSummeryPage from "./orderSummeryPage/orderSummeryPage";
 
 const Homepage = React.lazy(() => import("./homepagecomp/Apphome"));
 
@@ -30,7 +31,8 @@ function App() {
           <Route path="/cart-page" element = { <CartPage/>}/>
           <Route path='/product-list' element={<ProductListpage/>}/>
           <Route path='/check-out' element={<Checkout/>}/>
-          <Route path='/order-summary' element={<Ordersummary/>}/>
+          <Route path='/order-summary' element={<OrderSummeryPage/>}/>
+          
         </Routes>
 
         <Footer />

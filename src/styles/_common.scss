@@ -243,16 +243,21 @@ a {
     display: flex;
     justify-content: space-between;
     flex-direction: row;
-
+    
+    div{
+        text-align: center;
+        width: 25%!important;
+    }
     h1 {
         align-self: center;
         color: #00b18f!important;
-        text-overflow: clip;
-        width: 25%;
+        
+        
     }
 
     h2 {align-self: center;
         color: #00b18f;
+        text-overflow: clip;
         font-size: x-large;
         
     }
@@ -260,6 +265,7 @@ a {
     .quantity {
         align-self: center;
         height: fit-content;
+        width: 100%;
     }
     h3{
         align-self: center;
@@ -285,7 +291,7 @@ a {
 .card-img-div {
     border: hidden;
     overflow: hidden;
-    width: 17%;
+    width: 17%!important;
     height: 100%!important;
     display: flex;
     margin-left: 10px;
@@ -327,6 +333,14 @@ a {
     text-align: center;
 
 }
+.cart-detail1 {
+    display: block;
+    padding: 3%;
+    margin-top: 3%;
+    block-size: 30%;
+    justify-content: center;
+    text-align: center;
+}
 
 .cart-root {
     display: block;
@@ -335,6 +349,8 @@ a {
     padding: 2.5%;
     block-size: 30%;
     text-align: center;
+    // background-color: #e7e7dd;
+    background-color: #ffffff;
 
     h1 {
 
@@ -425,3 +441,38 @@ a {
     -webkit-animation: fadeIn 1s;
     animation: fadeIn 1s;
   }
+
+.order-summery{
+    font-size: 35px;
+}
+.div-order-summery{
+    display: flex;
+    justify-content: space-between;
+    h2{
+        font-size: large;
+        color: #21419A;
+    }
+    p{
+        font-size: large;
+    }
+}
+.border-total{
+    border-top: ridge;
+    border-bottom: ridge;
+    border-color: #000000;
+}
+.order-summery-page{
+    display: flex;
+    width:100%;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+.order-summery-list{
+    width:50%;
+    align-self:center;
+}
+.order-summery-re{
+    width:30%;
+    align-self: center;
+}
