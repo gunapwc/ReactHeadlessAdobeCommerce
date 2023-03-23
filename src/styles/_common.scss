@@ -109,7 +109,7 @@ a {
 }
 
 .sticky-top {
-    position: -webkit-sticky;
+    // position: -webkit-sticky;
     position: sticky;
     top: 0;
 
@@ -265,7 +265,7 @@ a {
     .quantity {
         align-self: center;
         height: fit-content;
-        width: 100%;
+        width: 100%!important;
     }
     h3{
         align-self: center;
@@ -283,18 +283,20 @@ a {
     display: flex;
     margin: 2% 3% 2% 3%;
     border: ridge;
-    border-radius: 15px;
     flex-direction: row;
     width: 95%;
+    vertical-align: middle;
+    background-color: #f1f1f1;
 }
 
 .card-img-div {
     border: hidden;
     overflow: hidden;
+    display: flex!important;
     width: 17%!important;
     height: 100%!important;
-    display: flex;
     margin-left: 10px;
+    
 
     img {
         align-self: center;
@@ -320,6 +322,7 @@ a {
     display: flex;
     flex-direction: column;
     width: 50%;
+    margin-top: 5%;
 
 }
 
@@ -327,7 +330,8 @@ a {
     display: block;
     padding: 3%;
     margin-top: 3%;
-    block-size: 30%;
+    // block-size: 40%;
+    width: 120%;
     border: ridge;
     justify-content: center;
     text-align: center;
@@ -337,7 +341,7 @@ a {
     display: block;
     padding: 3%;
     margin-top: 3%;
-    block-size: 30%;
+    // block-size: 100%;
     justify-content: center;
     text-align: center;
 }
@@ -353,7 +357,7 @@ a {
     background-color: #ffffff;
 
     h1 {
-
+        font-size: 45px;
         color: #21419A;
     }
 }
@@ -394,6 +398,7 @@ a {
     flex-direction: row-reverse;
     border: solid;
     width: 100px;
+    // width:100%;
     border-color: #00b18f;
     border-radius: 5px;
     overflow: hidden;
@@ -418,17 +423,17 @@ a {
 .cart-dialog {
     position: absolute;
     display: inline-block;
-    border: double;
+    border: none;
     border-radius: 15px;
-    background-color: #ddf2f5;
+    background-color: #f0f9fa;
     cursor: pointer;
     width: 30%;
     text-align: center;
-    left:60%;
-    top: 200px;;
+    left:70%;
+    top: 130px;
     opacity: 1;
     z-index: 10;
-    overflow:inherit;
+    overflow:hidden;
 }
 .root-div{
     box-shadow: inset;
@@ -443,7 +448,7 @@ a {
   }
 
 .order-summery{
-    font-size: 35px;
+    font-size: 25px!important;
 }
 .div-order-summery{
     display: flex;

@@ -127,7 +127,7 @@ function Header() {
 
                 </navbar>
 
-                <nav className="nav-items sticky-top">
+                <nav className="nav-items">
 
                     <Link class="nav-link"><span>New Arrivals </span></Link>
                     <Link class="nav-link"><span>Best Seller</span></Link>

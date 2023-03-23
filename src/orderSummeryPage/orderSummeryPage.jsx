@@ -21,8 +21,8 @@ const OrderSummeryPage = () => {
     },[]);
     return(
         <div className="order-summery-page">
+            <h1>Thank You Oder Confirmed.</h1>
             <div className="order-summery-list">
-                <h1>Order confirmed</h1>
                 <ul>
                     {array.map((value)=>{
                     return <li>

@@ -14,6 +14,7 @@ import {ProductListpage} from "./pages/sampledemo";
 import { Checkout } from "./pages/checkout";
 import Ordersummary from "./pages/ordersummary";
 import OrderSummeryPage from "./orderSummeryPage/orderSummeryPage";
+import MyOrders from "./My Orders/myorders";
 
 const Homepage = React.lazy(() => import("./homepagecomp/Apphome"));
 
@@ -32,6 +33,7 @@ function App() {
           <Route path='/product-list' element={<ProductListpage/>}/>
           <Route path='/check-out' element={<Checkout/>}/>
           <Route path='/order-summary' element={<OrderSummeryPage/>}/>
+          <Route path='/my-orders' element={<MyOrders/>}/>
           
         </Routes>
 

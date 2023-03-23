@@ -35,16 +35,15 @@ const CartPage = () => {
             <br />
             <div className="cart">
                 <div className="cart-list">
-                    <div className="cart-header">
-                        {/* <h1>Cart Summery</h1> */}
-                        <br />
-                        <br />
-                    </div>
-                    {data1.map((value, index) => {
-                        return (
-                            <CartTile valuecart={value} updatesquantity={(value1) => { updateQuantity(index, value1) }} />
-                        )
-                    })}
+                    <ul>
+                        <li>
+                            {data1.map((value, index) => {
+                                return (
+                                    <CartTile valuecart={value} updatesquantity={(value1) => { updateQuantity(index, value1) }} />
+                                )
+                            })}
+                        </li>
+                    </ul>
                 </div>
                 <div className="cart-detail1">
 
