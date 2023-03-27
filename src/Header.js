@@ -50,10 +50,10 @@ function Header() {
         dialog[0].attributes[0].ownerElement.hidden = !dialog[0].attributes[0].ownerElement.hidden;
 
     };
-    const handleClickOutside = (value) =>{
+    const handleClickOutside = (value) => {
         let dialog = document.getElementsByClassName('cart-dialog')
-        if(value.target.classList!="cart-dialog"&&value.target.offsetParent.classList!="cart-dialog" )
-        dialog[0].attributes[0].ownerElement.hidden = true;
+        if (value.target.classList != "cart-dialog" && value.target.offsetParent.classList != "cart-dialog")
+            dialog[0].attributes[0].ownerElement.hidden = true;
     }
     const handleCartClick = () => {
         Navigate("../cart-page")
@@ -63,84 +63,86 @@ function Header() {
     }
 
     return (
-        <header>
-            {Close ?
+        <>
+            <header>
+                {Close ?
 
-                <div className="offermessage">
-                    <div className="messages">Shop For AED 199 & Get Extra 10% Off*. Code: EXTRA10.*T&C </div>
+                    <div className="offermessage">
+                        <div className="messages">Shop For AED 199 & Get Extra 10% Off*. Code: EXTRA10.*T&C </div>
 
-                    <label class="close-header-top-ads cursorP" onClick={onClose}></label>
-                </div>
-                : false}
-
-            <div className='header-container'>
-                <navbar className="navhead">
-                    <div className="logo">
-                        <Link to="/App">
-                            {/* <img src={require("")} alt="Logo" /> */}
-                            <img src={Logo} alt="Logo" className='logoimg' />
-                        </Link>
+                        <label class="close-header-top-ads cursorP" onClick={onClose}></label>
                     </div>
+                    : false}
 
-                    <div className="searchsec">
-
-                        <Select
-                            defaultValue={selectedOption}
-                            onChange={setSelectedOption}
-                            options={options}
-                            placeholder="choose category"
-                            readonly />
-
-                        <form>
-
-                            <input type="text" className='searchinput' placeholder='What are you looking for' />
-
-                        </form>
-                    </div>
-
-
-                    <div className="headers-signin-part">
-                        <Link to="">
-                            <img src={Logo2} alt="Logo" className='secure-logo' />
-                        </Link>
-
-                        {/* <Link to=""> */}
-                        <div className='authorization-link'>
-                            <img src={Profile} alt="Profile" />
-                            <ul >
-                                <li>Register</li>
-                                <li>Signin</li>
-                            </ul>
-                            {/* </Link> */}</div>
-
-
-                        <div className='mycart' onClick={cartDilog}>
-                            <img src={Cart} alt="Cart" />
-                            <ul>
-                                <li><span className='text'> My Cart  </span> </li>
-                                <li> <span className='cart-count'>AED <span> 0 </span> </span></li>
-                            </ul>
-                            <span className='cart-qty'> 2</span>
+                <div className='header-container'>
+                    <navbar className="navhead">
+                        <div className="logo">
+                            <Link to="/App">
+                                {/* <img src={require("")} alt="Logo" /> */}
+                                <img src={Logo} alt="Logo" className='logoimg' />
+                            </Link>
                         </div>
 
-                    </div>
+                        <div className="searchsec">
 
-                </navbar>
+                            <Select
+                                defaultValue={selectedOption}
+                                onChange={setSelectedOption}
+                                options={options}
+                                placeholder="choose category"
+                                readonly />
 
-                <nav className="nav-items">
+                            <form>
 
-                    <Link class="nav-link"><span>New Arrivals </span></Link>
-                    <Link class="nav-link"><span>Best Seller</span></Link>
-                    <Link class="nav-link"><span>Category</span></Link>
-                    <Link class="nav-link"><span>Brand</span></Link>
-                    <Link class="nav-link" ><span>Offer</span></Link>
-                    {/* to={'/product-list'} */}
-                    <Link class="nav-link" to={'/order-summary'}><span>Track My Order</span></Link>
-                    {/* to={'/track-order'} */}
-                    <Link class="nav-link"><span>Clearance Sale</span></Link>
+                                <input type="text" className='searchinput' placeholder='What are you looking for' />
 
-                </nav>
-            </div>
+                            </form>
+                        </div>
+
+
+                        <div className="headers-signin-part">
+                            <Link to="">
+                                <img src={Logo2} alt="Logo" className='secure-logo' />
+                            </Link>
+
+                            {/* <Link to=""> */}
+                            <div className='authorization-link'>
+                                <img src={Profile} alt="Profile" />
+                                <ul >
+                                    <li>Register</li>
+                                    <li>Signin</li>
+                                </ul>
+                                {/* </Link> */}</div>
+
+
+                            <div className='mycart' onClick={cartDilog}>
+                                <img src={Cart} alt="Cart" />
+                                <ul>
+                                    <li><span className='text'> My Cart  </span> </li>
+                                    <li> <span className='cart-count'>AED <span> 0 </span> </span></li>
+                                </ul>
+                                <span className='cart-qty'> 2</span>
+                            </div>
+
+                        </div>
+
+                    </navbar>
+
+                    <nav className="nav-items">
+
+                        <Link class="nav-link"><span>New Arrivals </span></Link>
+                        <Link class="nav-link"><span>Best Seller</span></Link>
+                        <Link class="nav-link"><span>Category</span></Link>
+                        <Link class="nav-link"><span>Brand</span></Link>
+                        <Link class="nav-link" ><span>Offer</span></Link>
+                        {/* to={'/product-list'} */}
+                        <Link class="nav-link" to={'/order-summary'}><span>Track My Order</span></Link>
+                        {/* to={'/track-order'} */}
+                        <Link class="nav-link"><span>Clearance Sale</span></Link>
+
+                    </nav>
+                </div>
+            </header>
             <div className='cart-dialog' hidden={true}>
                 <div>
                     <div className='root-div'>
@@ -150,7 +152,7 @@ function Header() {
                                     <li>
                                         {/* <CartTile valuecart={value} updatesquantity={(value1) => { updateQuantity(index, value1) }} ></CartTile>
                                          */}
-                                         <CartTileFixed valuecart={value}></CartTileFixed>
+                                        <CartTileFixed valuecart={value}></CartTileFixed>
                                     </li>
                                 )
                             })}
@@ -162,7 +164,7 @@ function Header() {
 
                 </div>
             </div>
-        </header>
+        </>
     )
 
 }

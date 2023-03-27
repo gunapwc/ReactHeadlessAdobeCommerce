@@ -1,7 +1,11 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const OrderTile = ({value}) => {
-
+    const Navigate = useNavigate();
+    const openOrderDetails = () =>{
+        Navigate(`/order-details/${value.order_id}`)
+    }
     return(
         <div className="cart-card-root">
             <div className="cart-card">
@@ -21,6 +25,11 @@ const OrderTile = ({value}) => {
                     <div>
                         <h3>Delivery Date</h3>
                         <h2>{value.delivery_date.toDateString()}</h2>
+                    </div>
+                    <div>
+                    <div className="button-div">
+                        <button onClick={openOrderDetails}>Order Details</button>
+                    </div>
                     </div>
                 </div>
             </div>

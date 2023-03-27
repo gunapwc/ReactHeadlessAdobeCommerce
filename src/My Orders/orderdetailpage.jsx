@@ -1,8 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, {useState,useEffect} from "react";
+import { useParams } from "react-router-dom";
 import CartTileFixed from "../cart tile/cartTileFixed";
 import OrderSummery from "../orderSumery/orderSummery";
 
-const OrderSummeryPage = () => {
+const OrderDetailPage = () => {
+    let { orderId } = useParams();
+    console.log(orderId);
+      
     const [array,setArray] = useState([]);
     useEffect(()=>{
 
@@ -25,7 +29,7 @@ const OrderSummeryPage = () => {
             <div className="order-summery-list">
                 <ul>
                     {array.map((value)=>{
-                    return <li>
+                    return <li key = { value.product_name}>
                         <CartTileFixed valuecart={value}/>
                     </li>
                     })
@@ -41,4 +45,4 @@ const OrderSummeryPage = () => {
     )
 }
 
-export default OrderSummeryPage;
+export default OrderDetailPage;

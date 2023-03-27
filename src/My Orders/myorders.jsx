@@ -1,5 +1,6 @@
 import React, {useState,useEffect} from "react";
 import OrderTile from "./ordertile";
+import "./myorders.scss"
 
 const MyOrders = (props) => {
    
