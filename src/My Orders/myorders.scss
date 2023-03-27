@@ -1,12 +1,14 @@
 .orders-root{
     width:95%;
     h1{
-        margin: 1% 5% 1% 5%;
-        color: #21419A;
+        margin: 3% 5% 0% 0%;
+    color: #000000;
+    font-weight: 600;
+    font-size: 28px;
     }
 }
 .orders-list{
-    width:70%;
+    width:100%;
 }
 
 .button-div2 {
@@ -14,13 +16,11 @@
     display: flex;
 
     button {
-        align-self: center;
-        width: max-content;
-        border: solid;
-        border-color: #00b18f;
-        background-color: #00b18f;
-        color: #ffffff;
-        // padding: 1% 10% 1% 10%;
-        border-radius: 15px;
+        border: 1px solid #00b18f;
+    background-color: #00b18f;
+    color: #ffffff;
+    border-radius: 2px;
+    padding: 10px 22px;
+    font-weight: 600;
     }
 }
