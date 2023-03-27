@@ -272,7 +272,8 @@ a {
 .cart-card-detail {
     display: flex;
     justify-content: space-between;
-    flex-direction: row;
+    // flex-direction: row;
+    align-items: center;
     padding: 8px 6px;
     
     div{
@@ -316,14 +317,12 @@ a {
 
 .cart-card-root {
     display: flex;
-    margin: 4% 3% 4% 3%;
-    // border: ridge;
+    margin: 1% 0;
     flex-direction: row;
-    width: 95%;
+    width: 100%;
     vertical-align: middle;
     background-color: #fff;
     border-bottom: 1px solid #bebebe;
-    // box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
 }
 
 .card-img-div {
@@ -366,12 +365,13 @@ a {
 .cart-detail {
     display: block;
     padding: 3%;
-    margin-top: 3%;
-    // block-size: 40%;
-    width: 120%;
-    border: ridge;
+    width: 100%;
     justify-content: center;
     text-align: center;
+    background-color: #fff;
+    border: 1px solid #bebebe;
+    border-radius: 2px;
+    padding: 14px 22px;
 
 }
 .cart-detail1 {
@@ -403,7 +403,7 @@ a {
     width: 100%;
     display: flex;
     justify-content: center;
-    margin-top: 10%;
+    // margin-top: 10%;
 
     button {
         border: solid;
@@ -489,23 +489,28 @@ a {
   }
 
 .order-summery{
-    font-size: 25px!important;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 26px;
 }
 .div-order-summery{
     display: flex;
     justify-content: space-between;
     h2{
-        font-size: large;
-        color: #21419A;
+        font-size: 14px;
+    color: #21419A;
+    padding: 8px 0;
     }
     p{
-        font-size: large;
+        font-size: 14px;
+    padding: 8px 0;
     }
 }
 .border-total{
-    border-top: ridge;
-    border-bottom: ridge;
-    border-color: #000000;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    border-color: #bebebe;
+    padding: 6px 0px;
 }
 .order-summery-page{
     display: flex;
@@ -515,10 +520,11 @@ a {
     text-align: center;
 }
 .order-summery-list{
-    width:50%;
+    width:30%;
     align-self:center;
 }
 .order-summery-re{
     width:30%;
     align-self: center;
+    padding-top: 20px;
 }
