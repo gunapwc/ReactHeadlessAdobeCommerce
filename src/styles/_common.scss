@@ -133,27 +133,28 @@ a {
 .pdp-info {
     display: flex;
     flex-direction: row;
-    padding: 5%;
-    box-shadow: 1px 1px 1px 1px #000000;
+    padding: 3% 70px;
+    // box-shadow: 1px 1px 1px 1px #000000;
 
 }
 
 .pdp-detail {
-    display: flex;
-    margin-top: 2%;
-    padding-left: 10%;
+    // display: flex;
+    // margin-top: 2%;
+    padding-left: 8%;
     flex-direction: column;
-    align-items: start;
-    justify-content: center;
+    // align-items: start;
+    // justify-content: center;
 
     h1 {
-        color: #21419A;
+        color: #000000;
+        font-weight: 600;
     }
 
     h2 {
         color: #00b18f;
-        margin: 4%;
-        padding: 2%;
+        margin: 4% 0;
+        padding: 2% 0;
         font-size: medium;
     }
 
@@ -166,52 +167,80 @@ a {
     }
 
     p {
-        width: 40%
+        font-size: 14px;
+    line-height: 28px;
+    color: #363636;
     }
 
     .quantity {
-        margin: 4%;
+        margin: 4% 0;
+    background-color: #fff;
+    border: 1px solid #cbcbcb;
+    border-radius: 2px;
+    padding: 4px 6px;
     }
 }
 
 .pdp-button-align {
     display: flex;
     width: 100%;
-    justify-content: center;
-    padding: 10%;
+    // justify-content: center;
+    // padding: 10%;
 
     button {
         border: solid;
         border-color: #00b18f;
         background-color: #00b18f;
         color: #ffffff;
-        padding: 0% 10% 0% 10%;
-        border-radius: 5px;
+        padding: 2% 10% 2% 10%;
+        border-radius: 2px;
+        font-weight: 600;
     }
 }
 
 .plp-suggestions {
     display: flex;
-    width: 100%;
-
-
-
+    justify-content: center;
+    align-items: center;
 }
 
 .plp-card {
-    width: 100%;
-    margin: 3%;
-    z-index: 1;
+    margin: 24px 12px;
+    box-shadow: rgb(149 157 165 / 20%) 0px 4px 14px;
     text-align: center;
-    box-shadow: 1px 1px 1px 0px rgb(47, 47, 47);
-    background-color: #ddd;
-    border-radius: 5px;
-    overflow: hidden;
+    border-radius: 4px;
 
-    img {
-        width: 100%;
+    h1 {
+        margin-bottom: 10px;
+        padding-top: 20px;
+        font-weight: 600;
     }
+
+    p {
+        color: #5e5e5e;
+    }
+
 }
+
+// .plp-suggestions {
+//     display: flex;
+//     width: 100%;
+// }
+
+// .plp-card {
+//     width: 100%;
+//     margin: 3%;
+//     z-index: 1;
+//     text-align: center;
+//     box-shadow: 1px 1px 1px 0px rgb(47, 47, 47);
+//     background-color: #ddd;
+//     border-radius: 5px;
+//     overflow: hidden;
+
+//     img {
+//         width: 100%;
+//     }
+// }
 
 .pdp-img-selection {
     display: flex;
@@ -227,15 +256,16 @@ a {
     width: 100%;
     display: flex;
     justify-content: center;
-    padding: 10%;
+    padding: 8%;
 
     button {
         border: solid;
         border-color: #00b18f;
         background-color: #00b18f;
         color: #ffffff;
-        padding: 0% 10% 0% 10%;
-        border-radius: 5px;
+        padding: 2% 10% 2% 10%;
+        border-radius: 2px;
+        font-weight: 600;
     }
 }
 
@@ -243,10 +273,11 @@ a {
     display: flex;
     justify-content: space-between;
     flex-direction: row;
+    padding: 8px 6px;
     
     div{
-        text-align: center;
-        width: 25%;
+        text-align: left;
+        // width: 25%!important;
     }
     h1 {
         align-self: center;
@@ -258,7 +289,7 @@ a {
     h2 {align-self: center;
         color: #00b18f;
         text-overflow: clip;
-        font-size: x-large;
+        font-size: 16px;
         
     }
 
@@ -269,6 +300,7 @@ a {
     }
     h3{
         align-self: center;
+        font-size: 13px;
     }
 }
 .icon-button{
@@ -284,12 +316,14 @@ a {
 
 .cart-card-root {
     display: flex;
-    margin: 2% 3% 2% 3%;
-    border: ridge;
+    margin: 4% 3% 4% 3%;
+    // border: ridge;
     flex-direction: row;
     width: 95%;
     vertical-align: middle;
-    background-color: #f1f1f1;
+    background-color: #fff;
+    border-bottom: 1px solid #bebebe;
+    // box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
 }
 
 .card-img-div {
@@ -384,7 +418,7 @@ a {
     width: 100%;
     display: flex;
     justify-content: center;
-    margin: 1%;
+    margin: 6% 0 8%;
 
     button {
         border: solid;
@@ -392,25 +426,28 @@ a {
         background-color: #00b18f;
         color: #ffffff;
         padding: 1% 10% 1% 10%;
-        border-radius: 15px;
+        border-radius: 2px;
+        width: 100%;
+        margin: 0 10px;
+        font-weight: 600;
     }
 }
 
 .quantity {
     display: flex;
     flex-direction: row-reverse;
-    border: solid;
+    // border: solid;
     width: 100px;
-    // width:100%;
-    border-color: #00b18f;
-    border-radius: 5px;
+    // border-color: #00b18f;
+    // border-radius: 5px;
     overflow: hidden;
 
     button {
-        width: 33%;
+        width: 28%;
         border: #000000;
         margin: 2%;
         font-size: medium;
+        font-weight: 600;
         color: #ffffff;
         background-color: #00b18f;
     }
@@ -427,8 +464,9 @@ a {
     position: absolute;
     display: inline-block;
     border: none;
-    border-radius: 15px;
-    background-color: #f0f9fa;
+    border-radius: 4px;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
     cursor: pointer;
     width: 30%;
     text-align: center;
@@ -441,8 +479,8 @@ a {
 .root-div{
     box-shadow: inset;
     display: block;
-    border-bottom: solid;
-    border-color: #000000;
+    // border-bottom: solid;
+    // border-color: #000000;
 }
 .show {
     visibility: visible;
