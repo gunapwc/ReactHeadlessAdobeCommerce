@@ -50,7 +50,7 @@ const CartPage = () => {
                     <OrderSummery array={data1} />
 
                     <div className="button-div">
-                        <button>Place Order</button>
+                        <button>Proceed to Checkout</button>
                     </div>
                 </div>
             </div>

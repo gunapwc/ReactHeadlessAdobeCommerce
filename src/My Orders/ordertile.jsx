@@ -27,7 +27,7 @@ const OrderTile = ({value}) => {
                         <h2>{value.delivery_date.toDateString()}</h2>
                     </div>
                     <div>
-                    <div className="button-div">
+                    <div className="button-div2">
                         <button onClick={openOrderDetails}>Order Details</button>
                     </div>
                     </div>

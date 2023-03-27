@@ -296,7 +296,7 @@ a {
     .quantity {
         align-self: center;
         height: fit-content;
-        width: 100%!important;
+        width: 100%;
     }
     h3{
         align-self: center;
@@ -400,7 +400,7 @@ a {
 }
 
 .button-div {
-    width: 100%;
+    width: 120%;
     display: flex;
     justify-content: center;
     margin-top: 10%;
@@ -437,7 +437,7 @@ a {
     display: flex;
     flex-direction: row-reverse;
     // border: solid;
-    width: 100px;
+    width: 100px!important;
     // border-color: #00b18f;
     // border-radius: 5px;
     overflow: hidden;
