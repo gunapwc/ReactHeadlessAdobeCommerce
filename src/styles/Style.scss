@@ -85,12 +85,14 @@
 
         .css-b62m3t-container {
             width: 100%;
-            max-width: 160px;
+            max-width: 180px;
 
             .css-13cymwt-control {
-                background-color: $bg-primary;
+                background-color: #00b18f;
                 min-height: 36px;
-                border-radius: 5px 0px 0px 5px;
+                border-radius: 2px 0px 0px 2px;
+                border-color: #38b18f;
+                padding-left: 6px;
 
                 .css-1dimb5e-singleValue {
                     color: $white;
@@ -122,16 +124,15 @@
             width: 100%;
 
             input {
-                max-height: 40px;
-                padding: 7px;
+                max-height: 38px;
+                padding: 12px 8px 10px 14px;
                 width: 100%;
-                font-size: 16px;
+                font-size: 12px;
                 color: #707070;
                 font-style: normal;
-                border: 1px solid $gray;
+                border: 1px solid #ddd;
                 border-left: 0px;
-                border-radius: 0px 5px 5px 0px;
-
+                border-radius: 0px 2px 2px 0px;
             }
 
         }

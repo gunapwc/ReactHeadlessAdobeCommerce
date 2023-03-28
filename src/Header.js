@@ -89,7 +89,7 @@ function Header() {
                                 defaultValue={selectedOption}
                                 onChange={setSelectedOption}
                                 options={options}
-                                placeholder="choose category"
+                                placeholder="Choose Category"
                                 readonly />
 
                             <form>

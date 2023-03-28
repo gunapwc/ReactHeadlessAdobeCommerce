@@ -63,7 +63,7 @@ const ProductDetailPage = () => {
                         return <div className="plp-card">
                             <img src={img1}></img>
                             <h1>Any Medicine</h1>
-                            <p> _Price_</p>
+                            <p> Rs 499</p>
                             <div className="plp-button-align">
                                 <button onClick={onAdd}>Add To Cart</button>
                             </div>
