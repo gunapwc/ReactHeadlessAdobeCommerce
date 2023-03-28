@@ -26,19 +26,21 @@ const OrderDetailPage = () => {
     return(
         <div className="order-summery-page">
             <h1>Thank You Order Confirmed.</h1>
-            <div className="order-summery-list">
-                <ul>
-                    {array.map((value)=>{
-                    return <li key = { value.product_name}>
-                        <CartTileFixed valuecart={value}/>
-                    </li>
-                    })
-                }
-                </ul>
-            </div>
-            <div className="order-summery-re">
+            <div className="order-summary-wrap">
+                <div className="order-summery-list">
+                    <ul>
+                        {array.map((value)=>{
+                        return <li key = { value.product_name}>
+                            <CartTileFixed valuecart={value}/>
+                        </li>
+                        })
+                    }
+                    </ul>
+                </div>
+                <div className="order-summery-re">
 
-            <OrderSummery  array={array}/>
+                <OrderSummery  array={array}/>
+                </div>
             </div>
 
         </div>
