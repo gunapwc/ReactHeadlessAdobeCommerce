@@ -10,7 +10,7 @@ const OrderSummery = (props) => {
     }
     return (
         <div className="cart-detail">
-            <h1 className="order-summery">Order Summery</h1>
+            <h1 className="order-summery">Order Summary</h1>
             <div className="div-order-summery">
             <p>{props.array.length} items in cart</p> 
             <h2>RS {orderTotal()}</h2>

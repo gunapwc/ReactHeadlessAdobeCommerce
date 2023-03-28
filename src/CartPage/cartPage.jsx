@@ -31,7 +31,7 @@ const CartPage = () => {
     const [array, setarray] = useState([1, 2, 3])
     return (
         <div className="cart-root">
-            <h1>CART</h1>
+            <h1>Cart</h1>
             <br />
             <div className="cart">
                 <div className="cart-list">
