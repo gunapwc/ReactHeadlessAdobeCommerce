@@ -11,6 +11,7 @@ import { TrackMyOrder } from "./pages/trackmyorder";
 import {ProductListpage} from "./pages/sampledemo";
 import { Checkout } from "./pages/checkout";
 import Ordersummary from "./pages/ordersummary";
+import ChangePassword from "./homepagecomp/changepassword";
 
 const Homepage = React.lazy(() => import("./homepagecomp/Apphome"));
 
@@ -26,6 +27,7 @@ function App() {
           <Route path='/product-list' element={<ProductListpage/>}/>
           <Route path='/check-out' element={<Checkout/>}/>
           <Route path='/order-summary' element={<Ordersummary/>}/>
+          <Route path='/change-password' element={<ChangePassword/>}/>
         </Routes>
 
         <Footer />
