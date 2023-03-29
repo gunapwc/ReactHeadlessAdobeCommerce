@@ -18,6 +18,8 @@ import MyOrders from "./My Orders/myorders";
 import MyAccount from "./My Account/myaccount";
 import OrderDetailPage from "./My Orders/orderdetailpage";
 import ChangePassword from "./My Account/changepassword";
+import Login from "./login/login";
+import Register from "./login/register";
 
 const Homepage = React.lazy(() => import("./homepagecomp/Apphome"));
 
@@ -41,9 +43,11 @@ function App() {
           </Route>
           <Route path="/my-account" element={<MyAccount/>}>
             <Route path='orderdetail' element={<MyOrders />} />
-            <Route path='changepassword' element={<ChangePassword />} />
+            <Route path='changepassword' element={<ChangePassword />} />          
 
           </Route>
+          <Route path='/register' element={<Register />} />
+          <Route path='/login' element={<Login />} />
 
         </Routes>
 

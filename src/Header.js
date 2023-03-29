@@ -109,8 +109,8 @@ function Header() {
                             <div className='authorization-link'>
                                 <img src={Profile} alt="Profile" />
                                 <ul >
-                                    <li>Register</li>
-                                    <li>Signin</li>
+                                    <li> <Link to="/register">Register</Link></li>
+                                    <li><Link to="/login">Signin</Link></li>
                                 </ul>
                                 {/* </Link> */}</div>
 

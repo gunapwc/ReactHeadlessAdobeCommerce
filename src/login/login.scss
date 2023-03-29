@@ -1,0 +1,36 @@
+
+.login-wrap-section {
+    background-color: #fafbfd;
+    padding: 40px 20px;
+}
+
+.login-body {
+    width: 50%;
+    margin: 0 auto;
+    padding: 30px 25px;
+    background-color: #fff;
+    box-shadow: rgb(0 0 0 / 15%) 0px 5px 15px 0px;
+}
+
+h1.login-heading {
+    font-size: 26px;
+    font-weight: 600;
+}
+
+button.text-dark.text-btn-signin {
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: #bebebe;
+}
+
+.signup-btn:hover {
+    color: #38b18f;
+}
+
+button.text-dark.text-btn-signin:hover {
+    color: #fff;
+    background-color: #38b18f;
+    
+}

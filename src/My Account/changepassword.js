@@ -25,7 +25,7 @@ const ChangePassword = () => {
                         <label for="confirm-password" className="form-block" >Confirm Password</label>
                         <input type="confirm-password" name="confirm-password" id="confirm-password" placeholder="••••••••" className="form-control form-field" required="" />
                     </div>
-                    <div className="pass-checkbox d-flex align-items-center justify-content-start mb-4">
+                    <div className="pass-checkbox d-flex align-items-center justify-content-start mb-5">
                         <div className="check-wrap">
                           <input id="newsletter" aria-describedby="newsletter" type="checkbox" className="form-control " required="" />
                         </div>
@@ -33,7 +33,7 @@ const ChangePassword = () => {
                           <label for="newsletter" className="font-light mb-0">I accept the <a className="font-medium text-color" href="#">Terms and Conditions</a></label>
                         </div>
                     </div>
-                    <button type="submit" className="text-dark">Reset password</button>
+                    <button type="submit" className="text-dark">Reset Password</button>
                 </form>
             </div>
         </div>
