@@ -10,9 +10,14 @@ import Footer from "./footer";
 import { TrackMyOrder } from "./pages/trackmyorder";
 import ProductDetailPage from "./ProductDetailPage/productDetailpage";
 import CartPage from "./CartPage/cartPage";
-import {ProductListpage} from "./pages/sampledemo";
+import { ProductListpage } from "./pages/sampledemo";
 import { Checkout } from "./pages/checkout";
 import Ordersummary from "./pages/ordersummary";
+import OrderSummeryPage from "./orderSummeryPage/orderSummeryPage";
+import MyOrders from "./My Orders/myorders";
+import MyAccount from "./My Account/myaccount";
+import OrderDetailPage from "./My Orders/orderdetailpage";
+import Wishlist from "./wishlist/wishlist";
 
 const Homepage = React.lazy(() => import("./homepagecomp/Apphome"));
 
@@ -25,12 +30,21 @@ function App() {
         <Routes>
 
           <Route exact path="/" element={<Homepage />} />
-          <Route path='/track-order' element={<TrackMyOrder/>}/>
-          <Route path='/product-detail-page' element = {<ProductDetailPage/>} />
-          <Route path="/cart-page" element = { <CartPage/>}/>
-          <Route path='/product-list' element={<ProductListpage/>}/>
-          <Route path='/check-out' element={<Checkout/>}/>
-          <Route path='/order-summary' element={<Ordersummary/>}/>
+          <Route path='/track-order' element={<TrackMyOrder />} />
+          <Route path='/product-detail-page' element={<ProductDetailPage />} />
+          <Route path="/cart-page" element={<CartPage />} />
+          <Route path='/product-list' element={<ProductListpage />} />
+          <Route path='/check-out' element={<Checkout />} />
+          <Route path='/order-summary' element={<OrderSummeryPage />} />
+          <Route path='/order-details' >
+            <Route path=':orderId' element={<OrderDetailPage/>} />
+          </Route>
+          <Route path="/my-account" element={<MyAccount/>}>
+            <Route path='orderdetail' element={<MyOrders />} />
+            <Route path='wishlist' element={<Wishlist/>}/>
+
+          </Route>
+
         </Routes>
 
         <Footer />

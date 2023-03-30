@@ -2,9 +2,12 @@ import { createSlice } from '@reduxjs/toolkit'
 
 export const CartSlice = createSlice({
   name: 'cart',
-  initialState: {data:[
+  initialState: {
+    token:null,
+    authenticated:false,
+    data:[
     {
-      product_name: "Anythy Medicine ",
+      product_name: "Anythy Medicine",
       product_description: "Lower Gypsem text any text  Lower Gypsem text any text Lower Gypsem text any text Lower Gypsem text any text Lower Gypsem text any text Lower Gypsem text any text",
       product_quantity: 1,
       product_price: 100
@@ -17,6 +20,18 @@ export const CartSlice = createSlice({
     }
   ]},
   reducers: {
+    login: (state,action) => {
+      let nstate = state;
+      nstate.token = action.payload;
+      nstate.authenticated = true;
+      return nstate;
+    },
+    logout: (state,action) => {
+      let nstate = state;
+      nstate.token = null;
+      nstate.authenticated = false;
+      return nstate;
+    },
     addToCart: (state,action) => {
       // Redux Toolkit allows us to write "mutating" logic in reducers. It
       // doesn't actually mutate the state because it uses the Immer library,
@@ -28,7 +43,7 @@ export const CartSlice = createSlice({
     },
     removeFromCart: (state,action) => {
       let dataf =  state.data.filter(value=>value.product_name !== action.payload.product_name);
-      let nstate = {};
+      let nstate = state;
       nstate.data = dataf;
       return nstate;
     },
@@ -36,7 +51,7 @@ export const CartSlice = createSlice({
       let dataf =  state.data.filter(value=>value.product_name !== action.payload.product_name);
       // console.log(action);
       dataf.push(action.payload);
-      let nstate = {};
+      let nstate = state;
       nstate.data = dataf;
       return nstate;
     },
@@ -44,6 +59,6 @@ export const CartSlice = createSlice({
 })
 
 // Action creators are generated for each case reducer function
-export const { addToCart, removeFromCart, incrementQunatityCart } = CartSlice.actions
+export const { addToCart, removeFromCart, incrementQunatityCart, login , logout } = CartSlice.actions
 
 export default CartSlice.reducer

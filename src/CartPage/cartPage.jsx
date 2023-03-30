@@ -5,6 +5,7 @@ import "../styles/Style.scss";
 import { useSelector, useDispatch } from "react-redux";
 import { incrementQunatityCart } from "../redux/counterSlice";
 import CartTile from "../cart tile/cartTile";
+import OrderSummery from "../orderSumery/orderSummery";
 
 
 const CartPage = () => {
@@ -34,34 +35,22 @@ const CartPage = () => {
             <br />
             <div className="cart">
                 <div className="cart-list">
-                    <div className="cart-header">
-                        <h1>Cart Summery</h1>
-                    </div>
-                    {data1.map((value, index) => {
-                        return (
-                            <CartTile valuecart={value} updatesquantity={(value1) => { updateQuantity(index, value1) }}/>
-                        )
-                    })}
+                    <ul>
+                        <li>
+                            {data1.map((value, index) => {
+                                return (
+                                    <CartTile valuecart={value} updatesquantity={(value1) => { updateQuantity(index, value1) }} />
+                                )
+                            })}
+                        </li>
+                    </ul>
                 </div>
-                <div className="cart-detail">
-                    <div className="cart-detail">
-                        <h1>Order Summery</h1>
-                        {array.map((value) => {
-                            return (
-                                <>
-                                    <p>
-                                        1-2-3 X Price
-                                    </p>
-                                </>
-                            )
-                        })}
-                        <br />
-                        <p>
-                            order_total
-                        </p>
-                    </div>
+                <div className="cart-detail1">
+
+                    <OrderSummery array={data1} />
+
                     <div className="button-div">
-                        <button>Place Order</button>
+                        <button>Proceed to Checkout</button>
                     </div>
                 </div>
             </div>
