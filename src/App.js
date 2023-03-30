@@ -20,6 +20,7 @@ import OrderDetailPage from "./My Orders/orderdetailpage";
 import ChangePassword from "./My Account/changepassword";
 import Login from "./login/login";
 import Register from "./login/register";
+import ForgotPassword from "./login/forgotpassword";
 
 const Homepage = React.lazy(() => import("./homepagecomp/Apphome"));
 
@@ -36,7 +37,7 @@ function App() {
           <Route path='/product-detail-page' element={<ProductDetailPage />} />
           <Route path="/cart-page" element={<CartPage />} />
           <Route path='/product-list' element={<ProductListpage />} />
-          <Route path='/check-out' element={<Checkout />} />
+          <Route path='/checkout' element={<Checkout />} />
           <Route path='/order-summary' element={<OrderSummeryPage />} />
           <Route path='/order-details' >
             <Route path=':orderId' element={<OrderDetailPage/>} />
@@ -48,6 +49,7 @@ function App() {
           </Route>
           <Route path='/register' element={<Register />} />
           <Route path='/login' element={<Login />} />
+          <Route path='/forgotpassword' element={<ForgotPassword />} />
 
         </Routes>
 

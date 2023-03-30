@@ -61,3 +61,8 @@ a.text-privacy, a.text-login {
 a.text-privacy:hover, a.text-login:hover {
     color: #38b18f;
 }
+
+input.form-block:focus {
+    box-shadow: none !important;
+    border-color: #38b18f !important;
+}

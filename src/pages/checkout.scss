@@ -1,0 +1,135 @@
+
+.checkout-body {
+    background-color: #fafbfd;
+    padding: 40px 30px;
+}
+
+p.order-summary-title {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+p.order-summary-para {
+    font-size: 14px;
+    color: #454545;    
+}
+
+img.order-summary-product-img {
+    width: 140px;
+    height: 100px;
+    display: inline-block;
+}
+
+.order-summary-product-content {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.order-summary-product {
+    background-color: #fff;
+    border: 1px solid #bebebe;
+    margin-bottom: 16px;
+    padding: 22px;
+    border-radius: 2px;
+}
+
+p.order-summary-product-price {
+    font-size: 18px;
+    color: #38b18f;
+    font-weight: 600;
+    margin-top: 4px;
+}
+
+p.shipping-method-heading {
+    font-size: 18px;
+    margin-bottom: 16px;
+    font-weight: 600;
+}
+
+form.shipping-method-wrap {
+    border: 1px solid #bebebe;
+    padding: 18px 20px;
+    border-radius: 2px;
+    margin-bottom: 20px;
+}
+
+.free-delivery-title {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+p.free-delivery-para {
+    font-size: 14px;
+    margin-top: 2px;
+}
+
+p.payment-body-title {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+p.payment-body-para {
+    font-size: 14px;
+    color: #454545;
+    margin-bottom: 20px;
+}
+
+.payment-body {
+    padding: 26px 30px;
+    background-color: #fff;
+    border-radius: 2px;
+    box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+}
+
+.pay-padding {
+    margin-bottom: 18px;
+}
+
+button.checkout-place-order {
+    text-align: center;
+    padding: 12px 16px;
+    width: 100%;
+    background-color: #bebebe;
+    border-radius: 2px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 15px;
+    margin-top: 24px;
+}
+
+button.checkout-place-order:hover {
+    background-color: #38b18f;
+}
+
+p.payment-details, p.payment-details-price {
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+p.payment-details-total, p.payment-details-price-total {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+p.payment-details-price-total {
+    color: #38b18f;
+}
+
+input.form-check-delivery {
+    margin-top: 4px;
+}
+
+.shipping-method-size {
+    display: flex;
+    align-items: flex-start;
+    border: 1px solid #bebebe;
+    margin-bottom: 16px;
+    padding: 20px 16px;
+    border-radius: 2px;
+}
+
+.checkbox-input {
+    margin-top: 4px;
+}

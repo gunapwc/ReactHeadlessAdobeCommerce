@@ -27,7 +27,7 @@ const ChangePassword = () => {
                     </div>
                     <div className="pass-checkbox d-flex align-items-center justify-content-start mb-5">
                         <div className="check-wrap">
-                          <input id="newsletter" aria-describedby="newsletter" type="checkbox" className="form-control " required="" />
+                          <input id="newsletter" aria-describedby="newsletter" type="checkbox" className="form-control form-field" required="" />
                         </div>
                         <div className="ml-3">
                           <label for="newsletter" className="font-light mb-0">I accept the <a className="font-medium text-color" href="#">Terms and Conditions</a></label>

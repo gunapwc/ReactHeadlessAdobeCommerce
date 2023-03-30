@@ -1,4 +1,5 @@
 import React from "react";
+import { Switch, Route, NavLink, Link, Redirect, useNavigate } from "react-router-dom";
 import "./login.scss"
 
 const Login = () => {
@@ -32,7 +33,7 @@ const Login = () => {
                             <label for="remember" className="text-gray">Remember me</label>
                           </div>
                       </div>
-                      <a href="#" className="text-sm">Forgot password?</a>
+                      <Link to="/forgotpassword"> <a href="#" className="text-sm text-login">Forgot password?</a></Link>
                   </div>
                   <button type="submit" className="text-dark text-btn-signin mb-3">Sign in</button>
                   <p className="text-sm">

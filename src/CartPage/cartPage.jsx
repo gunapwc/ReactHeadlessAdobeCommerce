@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Switch, Route, NavLink, Link, Redirect, useNavigate } from "react-router-dom";
 import "../styles/_common.scss";
 import "../styles/_spacing.scss";
 import "../styles/Style.scss";
@@ -50,7 +51,7 @@ const CartPage = () => {
                     <OrderSummery array={data1} />
 
                     <div className="button-div">
-                        <button>Proceed to Checkout</button>
+                    <Link to="/checkout"> <button>Proceed to Checkout</button> </Link>
                     </div>
                 </div>
             </div>
