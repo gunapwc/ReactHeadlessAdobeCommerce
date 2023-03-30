@@ -25,7 +25,7 @@ const MyAccount = () => {
             {
                 key: "Favourite",
                 name: "Favourite",
-                link: "favourite"
+                link: "wishlist"
             }
         ])
     },[])

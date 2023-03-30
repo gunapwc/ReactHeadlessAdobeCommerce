@@ -209,6 +209,8 @@ a {
     box-shadow: rgb(149 157 165 / 20%) 0px 4px 14px;
     text-align: center;
     border-radius: 4px;
+    display: block;
+    width: 300px;
 
     h1 {
         margin-bottom: 10px;
@@ -279,6 +281,8 @@ a {
     div{
         text-align: left;
         // width: 25%!important;
+        width: 20%;
+        margin: 1%;
     }
     h1 {
         align-self: center;
@@ -359,6 +363,7 @@ a {
     flex-direction: column;
     width: 50%;
     margin-top: 5%;
+    margin-bottom: 5%;
 
 }
 
@@ -400,10 +405,10 @@ a {
 }
 
 .button-div {
-    width: 120%;
+    width: 100%;
     display: flex;
     justify-content: center;
-    // margin-top: 10%;
+    margin-top: 10%;
 
     button {
         border: solid;

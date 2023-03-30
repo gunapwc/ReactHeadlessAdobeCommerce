@@ -7,33 +7,62 @@ import Quantity from "../qunatity/quantity";
 import { useQuery, gql } from '@apollo/client';
 import { useNavigate } from "react-router-dom";
 import queryPdp from "./querypdp";
+import queryRelated from "./queryrelated";
+import { addToCart, login } from "../redux/counterSlice";
+import { useDispatch } from "react-redux";
 
 const ProductDetailPage = () => {
-    const [array, setarray] = useState([1, 2, 3, 4]);
+    const [array, setarray] = useState([1, 2, 3, 4, 5]);
+    const param = "110022";
     const Navigate = useNavigate();
+    const Dispatch = useDispatch();
+    // Dispatch(login(23456789));
     const onAdd = () => {
+        let item = {
+            product_name: content.name,
+            product_description: content.description.html,
+            product_quantity: qunatity,
+            product_price: 100
+          };
+        Dispatch(addToCart(item));
         Navigate("../cart-page")
     }
-    const [content, setContent] = useState({product_name:"Anythy Medicine we need some laarger text",
-                                            product_description:"Lower Gypsem text any text  Lower Gypsem text any text Lower Gypsem text any text Lower Gypsem text any text Lower Gypsem text any text Lower Gypsem text any text",
-                                            product_quantity:1,
-                                            product_price:100
-                                        });
-    // const { loading, error, data } = useQuery(queryPdp(0));
-    // useEffect(() => {
-    //     if (data) {
-    //         setContent(data.products.items);
-    //     }
-    //     console.log(content);
-    // }, [data]
-    // );
-    useEffect(()=>{
+    const [content, setContent] = useState({ name: "", 
+                                            description: { html: "",
+                                                         __typename: "" },
+                                            short_description: { html: "", 
+                                                                __typename: "" }, 
+                                            __typename: "" }
+                                            );
+    const [qunatity,setQuantity] = useState(1);
+    const [arrayR, setArrayR] = useState([]);
+    const { loading:loading, error:error, data:data } = useQuery(queryPdp(param));
+    const { loading:loading1, error:error1, data:data1 } = useQuery(queryRelated(param));
+    useEffect(() => {
+        if (data) {
+            setContent(data.products.items[0]);
+        }
+        console.log(content);
+    }, [loading]
+    );
+    useEffect(() => {
+        if (data1) {
+            setArrayR(data1.products.items[0]?.related_products);
+        }
+        console.log(arrayR);
+    }, [data1]
+    );
+    useEffect(() => {
         console.log(content)
-    },[content]);
+    }, [content]);
+    useEffect(() => {
+        console.log(arrayR)
+    }, [arrayR]);
     const updateQuantity = (value) => {
-            let data = content;
-            data.product_quantity = value;
-            setContent(data);
+        // let data = content;
+        // data.product_quantity = value;
+        // setContent(data);
+        setQuantity(value);
     }
     return (
         <div className="pdp">
@@ -48,9 +77,10 @@ const ProductDetailPage = () => {
                 <img src={img1} width="600px">
                 </img>
                 <div className="pdp-detail">
-                    <h1>{content.product_name}</h1>
-                    <p>{content.product_description}</p>
-                    <Quantity value={content.product_quantity} updateValue={updateQuantity}></Quantity>
+                    <h1>{content.name}</h1>
+                    <div dangerouslySetInnerHTML={{__html: content.description.html}}/>
+                    {/* <p>{content.description.html}</p> */}
+                    <Quantity value={qunatity} updateValue={updateQuantity}></Quantity>
                     <h2>{content.product_price} Rs.</h2>
                     <div className="pdp-button-align">
                         <button onClick={onAdd}>Add to Cart</button>
@@ -59,11 +89,11 @@ const ProductDetailPage = () => {
             </div>
             <div className="plp-suggestions">
                 {
-                    array.map((value) => {
+                    arrayR.map((value) => {
                         return <div className="plp-card">
                             <img src={img1}></img>
-                            <h1>Any Medicine</h1>
-                            <p> _Price_</p>
+                            <h1>{value.name}</h1>
+                            <p>{value.special_price}</p>
                             <div className="plp-button-align">
                                 <button onClick={onAdd}>Add To Cart</button>
                             </div>
