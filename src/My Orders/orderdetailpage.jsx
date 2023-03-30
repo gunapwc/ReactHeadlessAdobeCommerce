@@ -41,6 +41,10 @@ const OrderDetailPage = () => {
             <OrderSummery  array={array}/>
             </div>
 
+            <div className="order-continue-btn">
+                <button>Continue Shopping</button>
+            </div>
+
         </div>
     )
 }

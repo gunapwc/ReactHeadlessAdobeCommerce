@@ -521,20 +521,22 @@ a {
     border-color: #bebebe;
     padding: 6px 0px;
 }
-.order-summery-page{
+.order-summery-page {
     display: flex;
-    width:100%;
+    width: 100%;
     flex-direction: column;
     justify-content: center;
     text-align: center;
     margin-bottom: 40px;
+    padding: 40px 0;
+    background-color: #fafbfd;
 }
 .order-summery-list{
     width: 30%;
     align-self: center;
     background-color: #fff;
     padding: 30px 20px;
-    box-shadow: rgb(0 0 0 / 15%) 0px 4px 8px 0px;
+    box-shadow: rgb(0 0 0 / 15%) 0px 4px 2px 0px;
 }
 .order-summery-re{
     width:30%;
@@ -557,4 +559,22 @@ button.btn-icon-pd {
 
 button.btn-icon-pd:hover {
     color: #f30c0c;
+}
+
+.order-continue-btn {
+    padding: 12px 16px;
+    width: 30%;
+    color: #fff;
+    background-color:#bebebe;
+    margin: 20px auto;
+    border-radius: 2px;
+}
+
+.order-continue-btn button {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.order-continue-btn:hover {
+    background-color:#38b18f;
 }

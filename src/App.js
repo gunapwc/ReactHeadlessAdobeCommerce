@@ -21,6 +21,8 @@ import ChangePassword from "./My Account/changepassword";
 import Login from "./login/login";
 import Register from "./login/register";
 import ForgotPassword from "./login/forgotpassword";
+import SavedAddress from "./My Account/savedaddress";
+import NewAddress from "./My Account/newaddress";
 
 const Homepage = React.lazy(() => import("./homepagecomp/Apphome"));
 
@@ -31,7 +33,6 @@ function App() {
         <Header />
 
         <Routes>
-
           <Route exact path="/" element={<Homepage />} />
           <Route path='/track-order' element={<TrackMyOrder />} />
           <Route path='/product-detail-page' element={<ProductDetailPage />} />
@@ -41,15 +42,15 @@ function App() {
           <Route path='/order-summary' element={<OrderSummeryPage />} />
           <Route path='/order-details' >
             <Route path=':orderId' element={<OrderDetailPage/>} />
-          </Route>
+          </Route>          
           <Route path="/my-account" element={<MyAccount/>}>
-            <Route path='orderdetail' element={<MyOrders />} />
+            <Route path='orderdetails' element={<MyOrders />} />
             <Route path='changepassword' element={<ChangePassword />} />          
-
+            <Route path='savedaddress' element={<SavedAddress />} /> 
           </Route>
           <Route path='/register' element={<Register />} />
           <Route path='/login' element={<Login />} />
-          <Route path='/forgotpassword' element={<ForgotPassword />} />
+          <Route path='/forgotpassword' element={<ForgotPassword />} />         
 
         </Routes>
 
