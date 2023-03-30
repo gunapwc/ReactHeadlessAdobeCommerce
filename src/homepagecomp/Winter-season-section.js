@@ -16,42 +16,42 @@ export default function Winterseason() {
 
                         <div className='cdz-brand-top-categories'>
 
-                            <div class="placeof-circle-items">
+                            <div className="placeof-circle-items">
 
                                 <img src={require('../Assets/images/product-img/Cough_Throat-winter_essentials_1.png')} alt="Cough_Throat-winter_essentials_1" />
 
                             </div>
-                            <div class="placeof-circle-items">
+                            <div className="placeof-circle-items">
 
                                 <img src={require('../Assets/images/product-img/Facial_Moiturizers.png')} alt="Facial_Moiturizers" />
 
                             </div>
-                            <div class="placeof-circle-items">
+                            <div className="placeof-circle-items">
 
                                 <img src={require('../Assets/images/product-img/Vitamins_Min-winter_essentials_1.png')} alt="Vitamins_Min-winter_essentials_1" />
 
                             </div>
-                            <div class="placeof-circle-items">
+                            <div className="placeof-circle-items">
 
                                 <img src={require('../Assets/images/product-img/Dandruff-winter_essentials_1.png')} alt="Dandruff-winter_essentials_1" />
 
                             </div>
-                            <div class="placeof-circle-items">
+                            <div className="placeof-circle-items">
 
 <img src={require('../Assets/images/product-img/Cough_Throat-winter_essentials_1.png')} alt="Cough_Throat-winter_essentials_1" />
 
                             </div>
-                            <div class="placeof-circle-items">
+                            <div className="placeof-circle-items">
 
                             <img src={require('../Assets/images/product-img/Facial_Moiturizers.png')} alt="Facial_Moiturizers" />
 
                             </div>
-                            <div class="placeof-circle-items">
+                            <div className="placeof-circle-items">
 
                             <img src={require('../Assets/images/product-img/Vitamins_Min-winter_essentials_1.png')} alt="Vitamins_Min-winter_essentials_1" />
 
                             </div>
-                            <div class="placeof-circle-items">
+                            <div className="placeof-circle-items">
 
                             <img src={require('../Assets/images/product-img/Dandruff-winter_essentials_1.png')} alt="Dandruff-winter_essentials_1" />
 

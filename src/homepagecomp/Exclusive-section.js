@@ -45,32 +45,32 @@ export default function Exclusiveproduct() {
                         <OwlCarousel id="carousel-product" className="owl-carousel owl-theme" {...options}>
 
 
-                            <div class="item">
+                            <div className="item">
 
                                 <img src={require('../Assets/images/product-img/BabyRemedies.jpg')} alt="BabyRemedies.jpg" />
 
                             </div>
-                            <div class="item">
+                            <div className="item">
                                 <img src={require('../Assets/images/product-img/BabyRemedies.jpg')} alt="BabyRemedies.jpg" />
 
 
                             </div>
-                            <div class="item">
+                            <div className="item">
                                 <img src={require('../Assets/images/product-img/Popular_Categories-Beauty_1.jpg')} alt="BabyRemedies.jpg" />
 
 
                             </div>
-                            <div class="item">
+                            <div className="item">
                                 <img src={require('../Assets/images/product-img/Mother_Baby.jpg')} alt="BabyRemedies.jpg" />
 
 
                             </div>
-                            <div class="item">
+                            <div className="item">
                                 <img src={require('../Assets/images/product-img/Mother_Baby.jpg')} alt="BabyRemedies.jpg" />
 
 
                             </div>
-                            <div class="item">
+                            <div className="item">
                                 <img src={require('../Assets/images/product-img/Mother_Baby.jpg')} alt="BabyRemedies.jpg" />
 
 
@@ -96,32 +96,32 @@ export default function Exclusiveproduct() {
                      <OwlCarousel id="carousel-product" className="owl-carousel owl-theme" {...options}>
 
 
-                         <div class="item">
+                         <div className="item">
 
                              <img src={require('../Assets/images/product-img/Popular_Categories-Beauty_1.jpg')} alt="Popular_Categories-Beauty_1" />
 
                          </div>
-                         <div class="item">
+                         <div className="item">
                              <img src={require('../Assets/images/product-img/Sports_Nutrition.jpg')} alt="Sports_Nutrition" />
 
 
                          </div>
-                         <div class="item">
+                         <div className="item">
                              <img src={require('../Assets/images/product-img/Hair_Concern.jpg')} alt="Hair_Concern" />
 
 
                          </div>
-                         <div class="item">
+                         <div className="item">
                              <img src={require('../Assets/images/product-img/Mother_Baby.jpg')} alt="BabyRemedies" />
 
 
                          </div>
-                         <div class="item">
+                         <div className="item">
                              <img src={require('../Assets/images/product-img/Mother_Baby.jpg')} alt="BabyRemedies" />
 
 
                          </div>
-                         <div class="item">
+                         <div className="item">
                              <img src={require('../Assets/images/product-img/Mother_Baby.jpg')} alt="BabyRemedies.jpg" />
                          </div>
 

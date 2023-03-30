@@ -38,10 +38,10 @@ export default function Footer() {
 
 
                                 <div >
-                                    <p class="title"><strong>Information</strong></p>
+                                    <p className="title"><strong>Information</strong></p>
 
 
-                                    <ul id="footer-content" class="footer-link">
+                                    <ul id="footer-content" className="footer-link">
                                         <li> <Link>About Us </Link> </li>
                                         <li>  <Link>Contact Us </Link> </li>
                                         <li> <Link>Privacy Policy </Link> </li>
@@ -57,10 +57,10 @@ export default function Footer() {
                             <div className="">
                                 <div className="footlogo">
                                     <div >
-                                        <p class="title"><strong>Customer Care</strong></p>
+                                        <p className="title"><strong>Customer Care</strong></p>
 
 
-                                        <ul id="footer-content" class="footer-link">
+                                        <ul id="footer-content" className="footer-link">
                                         <li> <Link>Help & FAQ</Link> </li>
                                         <li>  <Link>My Account </Link> </li>
                                         <li> <Link>Order History</Link> </li>
@@ -74,7 +74,7 @@ export default function Footer() {
                             </div>
 
                             <div className="">
-                                <p class="title"><strong>Newsletter</strong></p>
+                                <p className="title"><strong>Newsletter</strong></p>
 
                                 <p>Sign up for our mailing list for latest updates &amp; offers.</p>
 

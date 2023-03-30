@@ -38,32 +38,32 @@ export default function Slider() {
         <section>
             <OwlCarousel id="carousel-banner" className="owl-carousel owl-theme" {...options}>
                
-            <div class="item">
-                <div class="shadow-effect">
+            <div className="item">
+                <div className="shadow-effect">
 
                     <img src={require('../Assets/images/AO-HB-Web-H_H.jpg')} alt="AO-HB-Web-H_H" />
 
                 </div>
 
             </div>
-            <div class="item">
-                <div class="shadow-effect">
+            <div className="item">
+                <div className="shadow-effect">
 
                     <img src={require('../Assets/images/AO-HB-Web-mom_baby.jpg')} alt="AO-HB-Web-H_H" />
 
                 </div>
 
             </div>
-            <div class="item">
-                <div class="shadow-effect">
+            <div className="item">
+                <div className="shadow-effect">
 
                     <img src={require('../Assets/images/myAster_new_user_Web_banner.jpg')} alt="AO-HB-Web-H_H" />
 
                 </div>
 
             </div>
-            <div class="item">
-                <div class="shadow-effect">
+            <div className="item">
+                <div className="shadow-effect">
                     <img src={require('../Assets/images/AO-HB-DIAPER_CARE-V3.jpg')} alt="AO-HB-Web-H_H" />
                 </div>
             </div>

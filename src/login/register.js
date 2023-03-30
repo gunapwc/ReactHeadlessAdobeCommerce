@@ -1,75 +1,98 @@
 import React from "react";
-import "./register.scss"
+import "./register.scss";
+
+import { useForm } from "react-hook-form";
+
+import mutationRegister from "../gql/query_sign_up.graphql";
+import { useQuery,useMutation } from '@apollo/client';
 
 const Register = () => {
-    return (
 
-        <>
-    
-    
-<div class="register-body">
-            <div class="register-body-wrap">
-            <h1 class="mb-4 text-center signup-heading">Sign up</h1>
-                <div class="register-wrap">
-                    <h1 class="mt-2 signup-title">Personal Information</h1>
-                    <input 
-                        type="text"
-                        class="form-block"
-                        name="fullname"
-                        placeholder="Full Name" />
+    const { register, handleSubmit, watch, formState: { errors } } = useForm();
+  
+    const [submitRegisterForm] = useMutation(mutationRegister, {
+      fetchPolicy: "no-cache",
+      onCompleted: (response) => {
+        console.log(response);
+      },
+      onError: (error) => {
+        console.log(error);
+      },
+    });
+  
+    const onSubmit = (data) => {
+      submitRegisterForm({ variables:  data });
+      console.log(data);
+    };
 
-                    <input 
-                        type="text"
-                        class="form-block"
-                        name="email"
-                        placeholder="Email" />
+  return (
+    <>
+      <div className="register-body">
+        <div className="register-body-wrap">
 
-                    <input 
-                        type="text"
-                        class="form-block"
-                        name="mobile"
-                        placeholder="Mob No" />
+        <form className="login-form-wrap" action="#" onSubmit={handleSubmit(onSubmit)}>
+         
+          <h1 className="mb-4 text-center signup-heading">Sign up</h1>
+          
+          <div className="register-wrap">
 
-                    <input 
-                        type="password"
-                        class="form-block"
-                        name="password"
-                        placeholder="Password" />
-                        
-                    <input 
-                        type="password"
-                        class="form-block"
-                        name="confirm_password"
-                        placeholder="Confirm Password" />
+            <h1 className="mt-2 signup-title">Personal Information</h1>
+           
+            <input {...register("firstname", { required: true })}
+              type="text"
+              className="form-block"
+              required
+              placeholder="First Name"
+            />
 
-                    <button
-                        type="submit"
-                        class="text-center btn-center"
-                    >Create Account</button>
+            <input {...register("lastname", { required: true })}
+              type="text"
+              className="form-block"
+              placeholder="Last Name"
+              required
+            />
+            
+            <input {...register("email", { required: true })}
+              type="text"
+              className="form-block"
+              placeholder="Email"
+              required
+            />
 
-                    <div class="text-center text-sm text-grey-dark mt-4 mb-2">
-                        By signing up, you agree to the 
-                        <a class="text-grey text-privacy" href="#">
-                            Terms of Service
-                        </a> and  
-                        <a class="text-grey text-privacy" href="#">
-                             Privacy Policy
-                        </a>
-                    </div>
-                </div>
+            <input {...register("password", { required: true })}
+              type="password"
+              className="form-block"
+              placeholder="Password"
+              required
+            />
 
-                <div class="text-grey-dark sign-bottom mt-8">
-                    Already have an account? 
-                    <a class="text-blue text-login" href="../login/">
-                        Log in
-                    </a>
-                </div>
+            <button type="submit" className="text-center btn-center">
+              Create Account
+            </button>
+
+            <div className="text-center text-sm text-grey-dark mt-4 mb-2">
+              By signing up, you agree to the
+              <a className="text-grey text-privacy" href="#">
+                Terms of Service
+              </a>{" "}
+              and
+              <a className="text-grey text-privacy" href="#">
+                Privacy Policy
+              </a>
             </div>
-        </div>
-       
-      </>
+          </div>
 
-    );
+          <div className="text-grey-dark sign-bottom mt-8">
+            Already have an account?
+            <a className="text-blue text-login" href="../login/">
+              Log in
+            </a>
+          </div>
+          </form>
+        </div>
+      </div>
+    </>
+  );
 };
 
 export default Register;
