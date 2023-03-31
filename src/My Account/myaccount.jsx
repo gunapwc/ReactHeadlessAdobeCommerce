@@ -15,7 +15,7 @@ const MyAccount = () => {
             {
                 key: "SavedAddresses",
                 name: "Saved Addresses",
-                link: "SavedAddresses"
+                link: "savedaddress"
             },
             {
                 key: "OrderDetails",
