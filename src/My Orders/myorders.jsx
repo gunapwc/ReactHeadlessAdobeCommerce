@@ -21,7 +21,7 @@ const MyOrders = (props) => {
     
     return (
         <div className="orders-root">
-            <h1>Orders</h1>
+            <h1>My Orders</h1>
             <br />
             <div className="orders">
                 <div className="orders-list">

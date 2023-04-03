@@ -4,6 +4,7 @@ import Quantity from "../qunatity/quantity";
 
 const CartTileFixed = ({ valuecart, updatesquantity }) => {
     return (
+        <>
         <div className="cart-card-root">
             <div className="cart-card">
                 <div className="cart-card-detail">
@@ -25,6 +26,29 @@ const CartTileFixed = ({ valuecart, updatesquantity }) => {
                 </div>
             </div>
         </div>
+
+        {/* mini-cart */}
+
+        <div className="mini-cart-summary-body">
+            <div className="mini-cart-summary d-flex justify-content-between align-items-center">
+                <p>3 items in cart</p> 
+                <h2>RS 364</h2>
+            </div>
+            <div className="mini-cart-summary d-flex justify-content-between align-items-center">
+                <p>Delivery Charges</p> 
+                <h2>RS 20</h2>
+            </div>
+            <div className="mini-cart-summary d-flex justify-content-between align-items-center">
+                <p>GST</p> 
+                <h2>RS 42</h2>
+            </div>
+            <div className="mini-cart-total d-flex justify-content-between align-items-center">
+                <p>Total</p> 
+                <h2>RS 426</h2>
+            </div>
+        </div>
+        
+     </>
     )
 }
 

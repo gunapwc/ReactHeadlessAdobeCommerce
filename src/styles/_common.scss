@@ -274,13 +274,11 @@ a {
 .cart-card-detail {
     display: flex;
     justify-content: space-between;
-    // flex-direction: row;
-    // align-items: center;
+    border-bottom: 1px solid #bebebe;
     padding: 8px 6px;
     
     div{
-        text-align: left;
-        // width: 25%!important;
+        text-align: left;;
     }
     h1 {
         align-self: center;
@@ -316,7 +314,7 @@ a {
 
 .cart-card {
     display: flexbox;
-    margin: 2% 1% 2% 1%;
+    margin: 2% 2% 2% 2%;
     flex-direction: column;
     width: 100%;
 }
@@ -328,7 +326,7 @@ a {
     width: 100%;
     vertical-align: middle;
     background-color: #fff;
-    border-bottom: 1px solid #bebebe;
+    // border-bottom: 1px solid #bebebe;
 }
 
 .card-img-div {
@@ -417,7 +415,7 @@ a {
     border-color: #00b18f;
     background-color: #00b18f;
     color: #ffffff;
-    padding: 6px 20px;
+    padding: 8px 20px;
     border-radius: 2px;
     width: 100%;
     font-weight: 600;
@@ -434,7 +432,7 @@ a {
         border-color: #00b18f;
         background-color: #00b18f;
         color: #ffffff;
-        padding: 1% 10% 1% 10%;
+        padding: 2% 10% 2% 10%;
         border-radius: 2px;
         width: 100%;
         margin: 0 10px;
@@ -578,3 +576,36 @@ button.btn-icon-pd:hover {
 .order-continue-btn:hover {
     background-color:#38b18f;
 }
+
+
+// mini-cart-css-start
+
+.mini-cart-summary-body {
+    padding: 14px 10px;
+}
+
+.mini-cart-summary p {
+    margin-bottom: 16px;
+}
+
+.mini-cart-total {
+    border-top: 1px solid #bebebe;
+    border-bottom: 1px solid #bebebe;
+    padding: 14px 0;
+}
+
+.mini-cart-total p {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.mini-cart-total h2 {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+
+
+
+
+// mini-cart-css-end
