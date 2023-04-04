@@ -29,9 +29,20 @@ const defaultOptions = {
 
 const authMiddleware = new ApolloLink((operation, forward) => {
   // add the authorization to the headers
+  // import { addToCart, login } from "../redux/counterSlice";
+  // import { useDispatch } from "react-redux";
+  // const Dispatch = useDispatch();
+  // Dispatch(login(23456789));
+  let token;
+  const persistedToken = JSON.parse(window.localStorage.getItem("persist:Catelog")).token;
+  if(persistedToken !== "null")
+  {
+    token = persistedToken;
+  }
   operation.setContext(({ headers = {} }) => ({
     headers: {
       ...headers,
+      authorization: token ? `Bearer ${token}` : "",
     }
   }));
 
