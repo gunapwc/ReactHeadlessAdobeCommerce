@@ -71,7 +71,7 @@ function Profile () {
             name="number"
             id="number"
             className="form-control profile-field"
-            value={data?.customer?.addresses[0]['telephone']}
+            value={data?.customer?.addresses?.telephone}
             readonly
           />
         </div>
