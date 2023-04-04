@@ -26,6 +26,7 @@ import NewAddress from "./My Account/newaddress";
 
 import 'react-notifications/lib/notifications.css';
 import { NotificationContainer } from 'react-notifications';
+import Wishlist from "./wishlist/wishlist";
 
 const Homepage = React.lazy(() => import("./homepagecomp/Apphome"));
 
@@ -50,7 +51,8 @@ function App() {
           <Route path="/my-account" element={<MyAccount/>}>
             <Route path='orderdetail' element={<MyOrders />} />
             <Route path='changepassword' element={<ChangePassword />} />          
-            <Route path='savedaddress' element={<SavedAddress />} /> 
+            <Route path='savedaddress' element={<SavedAddress />} />      
+            <Route path='wishlist' element={<Wishlist/>}/>
           </Route>
           <Route path='/register' element={<Register />} />
           <Route path='/login' element={<Login />} />
