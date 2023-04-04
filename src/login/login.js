@@ -13,10 +13,14 @@ const Login = () => {
     fetchPolicy: "no-cache",
     onCompleted: (response) => {
       if (response.generateCustomerToken.token) {
-        localStorage.setItem("user_token", JSON.stringify(response.generateCustomerToken));
+        // localStorage.setItem('user_token', JSON.stringify(response.generateCustomerToken['token']));
+        localStorage.setItem('user_token', response.generateCustomerToken.token);
       }
-      var hh = localStorage.getItem("user_token");
+      var hh = localStorage.getItem('user_token');
       console.log(hh);
+
+      console.log("token--> " +response.generateCustomerToken.token);
+
     },
     onError: (error) => {
       console.log(error);

@@ -52,11 +52,14 @@ const authMiddleware = new ApolloLink((operation, forward) => {
   // const Dispatch = useDispatch();
   // Dispatch(login(23456789));
   let token;
-  const persistedToken = localStorage.getItem("user_token");
+  const persistedToken = localStorage.getItem('user_token');
   if(persistedToken !== "null")
   {
     token = persistedToken;
   }
+
+  console.log('test-->' + token);
+
   operation.setContext(({ headers = {} }) => ({
     headers: {
       ...headers,

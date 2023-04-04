@@ -1,0 +1,24 @@
+.profile-body-wrap {
+    width: 95%;
+}
+
+.profile-body {
+    margin: 30px 0;
+}
+
+h2.profile-head {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.profile-field {
+    border: 1px solid #bebebe;
+    border-radius: 2px;
+    width: 60%;
+}
+
+.profile-field:focus {
+    box-shadow: none !important;
+    border: 1px solid #38b18f;
+}

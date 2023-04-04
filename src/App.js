@@ -23,6 +23,7 @@ import Register from "./login/register";
 import ForgotPassword from "./login/forgotpassword";
 import SavedAddress from "./My Account/savedaddress";
 import NewAddress from "./My Account/newaddress";
+import Profile from "./My Account/profile";
 
 import 'react-notifications/lib/notifications.css';
 import { NotificationContainer } from 'react-notifications';
@@ -51,7 +52,11 @@ function App() {
             <Route path='orderdetail' element={<MyOrders />} />
             <Route path='changepassword' element={<ChangePassword />} />          
             <Route path='savedaddress' element={<SavedAddress />} /> 
+            
+            <Route path='profile' element={<Profile />} /> 
           </Route>
+          <Route path='newaddress' element={<NewAddress />} /> 
+
           <Route path='/register' element={<Register />} />
           <Route path='/login' element={<Login />} />
           <Route path='/forgotpassword' element={<ForgotPassword />} />

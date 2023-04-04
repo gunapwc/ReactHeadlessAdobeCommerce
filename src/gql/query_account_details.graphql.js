@@ -1,12 +1,16 @@
-import { gql } from '@apollo/client';
+import { gql } from "@apollo/client";
 
 export default gql`
-{
-  customer {
-      firstname middlename lastname email
+  {
+    customer {
+      firstname
+      middlename
+      lastname
+      suffix
+      email
       addresses {
-          telephone
+        telephone
       }
+    }
   }
-}
 `;
