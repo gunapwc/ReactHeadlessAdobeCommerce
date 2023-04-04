@@ -1,0 +1,85 @@
+.saved-address-body-wrap {
+    background-color: #fff;
+    box-shadow: rgb(0 0 0 / 24%) 0px 2px 4px;
+    padding: 30px 36px;
+    margin-top: 28px;
+    margin-right: 30px;
+    margin-bottom: 30px;
+}
+
+h2.saved-address-title{
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 22px;
+}
+
+.home-address, .office-address {
+    background-color: #F9FAFB;
+    padding: 26px 36px;
+    border: 1px solid #e7e7e7;
+    border-radius: 2px;
+    margin-bottom: 20px;
+}
+
+p.home-loc, p.office-loc {
+    font-size: 14px;
+    color: #454545;
+    line-height: 26px;
+    margin: 12px 0;
+}
+
+h4.home-add-title, h4.office-add-title {
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 6px;
+}
+
+.home-icon, .office-icon {
+    color: #38b18f;
+}
+
+a.home-edit-link, a.home-edit-delete,a.office-edit-link, a.office-edit-delete {
+    font-size: 14px;
+    color: #38b18f;
+}
+
+a.home-edit-link:hover, a.home-edit-delete:hover ,a.office-edit-link:hover , a.office-edit-delete:hover {
+    text-decoration: underline;
+}
+
+.home-add-wrap, .office-add-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.new-address {
+    padding: 26px 36px;
+    border: 1px dashed #bdbdbd;
+    border-radius: 2px;
+    text-align: center;
+}
+
+p.new-loc {
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+span.new-add-title {
+    font-size: 24px;
+    color: #38b18f;
+}
+
+.save-btn-wrap button {
+    font-size: 14px;
+    background-color: #38b18f;
+    padding: 10px 52px;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 2px;
+}
+
+a.new-add-link:hover p.new-loc {
+    color: #38b18f;
+}
