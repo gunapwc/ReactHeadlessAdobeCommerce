@@ -10,7 +10,7 @@ const MyAccount = () => {
             {
                 key: "MyAccount",
                 name: "My Account",
-                link: ""
+                link: "profile"
             },
             {
                 key: "SavedAddresses",
