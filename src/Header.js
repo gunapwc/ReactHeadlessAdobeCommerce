@@ -70,7 +70,7 @@ function Header() {
                     <div className="offermessage">
                         <div className="messages">Shop For AED 199 & Get Extra 10% Off*. Code: EXTRA10.*T&C </div>
 
-                        <label class="close-header-top-ads cursorP" onClick={onClose}></label>
+                        <label className="close-header-top-ads cursorP" onClick={onClose}></label>
                     </div>
                     : false}
 
@@ -89,7 +89,7 @@ function Header() {
                                 defaultValue={selectedOption}
                                 onChange={setSelectedOption}
                                 options={options}
-                                placeholder="choose category"
+                                placeholder="Choose Category"
                                 readonly />
 
                             <form>
@@ -109,8 +109,8 @@ function Header() {
                             <div className='authorization-link'>
                                 <img src={Profile} alt="Profile" />
                                 <ul >
-                                    <li>Register</li>
-                                    <li>Signin</li>
+                                    <li> <Link to="/register">Register</Link></li>
+                                    <li><Link to="/login">Signin</Link></li>
                                 </ul>
                                 {/* </Link> */}</div>
 
@@ -130,15 +130,15 @@ function Header() {
 
                     <nav className="nav-items">
 
-                        <Link class="nav-link"><span>New Arrivals </span></Link>
-                        <Link class="nav-link"><span>Best Seller</span></Link>
-                        <Link class="nav-link"><span>Category</span></Link>
-                        <Link class="nav-link"><span>Brand</span></Link>
-                        <Link class="nav-link" ><span>Offer</span></Link>
+                        <Link className="nav-link"><span>New Arrivals </span></Link>
+                        <Link className="nav-link"><span>Best Seller</span></Link>
+                        <Link className="nav-link"><span>Category</span></Link>
+                        <Link className="nav-link"><span>Brand</span></Link>
+                        <Link className="nav-link" ><span>Offer</span></Link>
                         {/* to={'/product-list'} */}
-                        <Link class="nav-link" to={'/order-summary'}><span>Track My Order</span></Link>
+                        <Link className="nav-link" to={'/order-summary'}><span>Track My Order</span></Link>
                         {/* to={'/track-order'} */}
-                        <Link class="nav-link"><span>Clearance Sale</span></Link>
+                        <Link className="nav-link"><span>Clearance Sale</span></Link>
 
                     </nav>
                 </div>

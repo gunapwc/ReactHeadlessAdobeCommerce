@@ -9,8 +9,8 @@ export default function Brandexplore() {
 
             <div className="cdz-brand-slider-wrap essential-deals-wrapper">
 
-                <div class="cdz-block-title">
-                    <p class="cdz-title">Brands You'd Love To Explore</p>
+                <div className="cdz-block-title">
+                    <p className="cdz-title">Brands You'd Love To Explore</p>
                 </div>
 
                 <div className="cdz-brand-top-categories-landscape">

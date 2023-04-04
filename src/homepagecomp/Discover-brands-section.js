@@ -16,42 +16,42 @@ function Discoverbrand() {
 
                             <div className='cdz-brand-top-categories'>
 
-                                <div class="placeof-circle-items">
+                                <div className="placeof-circle-items">
 
                                     <img src={require('../Assets/images/product-img/dicover-images/Hot_Deals-ACM.png')} alt="Cough_Throat-winter_essentials_1" />
 
                                 </div>
-                                <div class="placeof-circle-items">
+                                <div className="placeof-circle-items">
 
                                     <img src={require('../Assets/images/product-img/dicover-images/Hot_Deals-NUTROGENA.png')} alt="Facial_Moiturizers" />
 
                                 </div>
-                                <div class="placeof-circle-items">
+                                <div className="placeof-circle-items">
 
                                     <img src={require('../Assets/images/product-img/dicover-images/Hot_Deals-PHL_1.png')} alt="Vitamins_Min-winter_essentials_1" />
 
                                 </div>
-                                <div class="placeof-circle-items">
+                                <div className="placeof-circle-items">
 
                                     <img src={require('../Assets/images/product-img/dicover-images/Hot_Deals-Rexona.png')} alt="Dandruff-winter_essentials_1" />
 
                                 </div>
-                                <div class="placeof-circle-items">
+                                <div className="placeof-circle-items">
 
                                     <img src={require('../Assets/images/product-img/dicover-images/Marti_Derm.png')} alt="Cough_Throat-winter_essentials_1" />
 
                                 </div>
-                                <div class="placeof-circle-items">
+                                <div className="placeof-circle-items">
 
                                     <img src={require('../Assets/images/product-img/dicover-images/Cantu.png')} alt="Facial_Moiturizers" />
 
                                 </div>
-                                <div class="placeof-circle-items">
+                                <div className="placeof-circle-items">
 
                                     <img src={require('../Assets/images/product-img/dicover-images/Novaclear.png')} alt="Novaclear" />
 
                                 </div>
-                                <div class="placeof-circle-items">
+                                <div className="placeof-circle-items">
 
                                     <img src={require('../Assets/images/product-img/dicover-images/Cantu.png')} alt="cantu" />
 

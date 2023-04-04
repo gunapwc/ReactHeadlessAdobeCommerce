@@ -219,7 +219,9 @@ a {
     }
 
     p {
-        color: #5e5e5e;
+        color: #000000;
+    font-size: 16px;
+    font-weight: 600;
     }
 
 }
@@ -275,7 +277,7 @@ a {
     display: flex;
     justify-content: space-between;
     // flex-direction: row;
-    align-items: center;
+    // align-items: center;
     padding: 8px 6px;
     
     div{
@@ -302,10 +304,14 @@ a {
         align-self: center;
         height: fit-content;
         width: 100%;
+        border: 1px solid #cbcbcb;
+    border-radius: 2px;
+    padding: 4px 6px;
     }
     h3{
         align-self: center;
-        font-size: 13px;
+        font-size: 12px;
+        margin-bottom: 4px;
     }
 }
 .icon-button{
@@ -349,8 +355,8 @@ a {
 .cart {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
-    border: ridge;
+    justify-content: space-around;
+    box-shadow: rgb(17 17 26 / 10%) 0px 4px 12px;
 }
 
 .cart-header {
@@ -361,7 +367,7 @@ a {
 .cart-list {
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 60%;
     margin-top: 5%;
     margin-bottom: 5%;
 
@@ -383,7 +389,7 @@ a {
     display: block;
     padding: 3%;
     margin-top: 3%;
-    // block-size: 100%;
+    width: 34%;
     justify-content: center;
     text-align: center;
 }
@@ -399,8 +405,9 @@ a {
     background-color: #ffffff;
 
     h1 {
-        font-size: 45px;
-        color: #21419A;
+        font-size: 26px;
+    color: #000;
+    font-weight: 600;
     }
 }
 
@@ -412,11 +419,13 @@ a {
 
     button {
         border: solid;
-        border-color: #00b18f;
-        background-color: #00b18f;
-        color: #ffffff;
-        padding: 1% 10% 1% 10%;
-        border-radius: 15px;
+    border-color: #00b18f;
+    background-color: #00b18f;
+    color: #ffffff;
+    padding: 6px 20px;
+    border-radius: 2px;
+    width: 100%;
+    font-weight: 600;
     }
 }
 .button-div1 {
@@ -523,13 +532,34 @@ a {
     flex-direction: column;
     justify-content: center;
     text-align: center;
+    margin-bottom: 40px;
 }
 .order-summery-list{
-    width:30%;
-    align-self:center;
+    width: 30%;
+    align-self: center;
+    background-color: #fff;
+    padding: 30px 20px;
+    box-shadow: rgb(0 0 0 / 15%) 0px 4px 8px 0px;
 }
 .order-summery-re{
     width:30%;
     align-self: center;
     padding-top: 20px;
+}
+
+.icon-button.icon-left {
+    text-align: right;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
+
+button.btn-icon-pd {
+    font-size: 14px;
+    padding: 1px;
+    color: #545454;
+}
+
+button.btn-icon-pd:hover {
+    color: #f30c0c;
 }

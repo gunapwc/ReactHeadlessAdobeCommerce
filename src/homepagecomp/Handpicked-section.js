@@ -8,8 +8,8 @@ export default function Handpicked () {
 
             <div className="cdz-brand-slider-wrap essential-deals-wrapper">
 
-                <div class="cdz-block-title">
-                    <p class="cdz-title">Handpicked By Our Experts</p>
+                <div className="cdz-block-title">
+                    <p className="cdz-title">Handpicked By Our Experts</p>
                 </div>
 
                 <div className="cdz-brand-top-categories-landscape">

@@ -9,8 +9,8 @@ export default function Supplements() {
 
                 <div className="cdz-brand-slider-wrap essential-deals-wrapper">
 
-                    <div class="cdz-block-title">
-                        <p class="cdz-title">Brands You'd Love To Explore</p>
+                    <div className="cdz-block-title">
+                        <p className="cdz-title">Brands You'd Love To Explore</p>
                     </div>
 
                     <div className="cdz-brand-top-categories-landscape">
@@ -20,7 +20,7 @@ export default function Supplements() {
                             <div className="tc-outer">
                                 <Link to="">
 
-                                    <div class="tc-inner">
+                                    <div className="tc-inner">
 
                                         <img src={require('../Assets/images/product-img/Diapers_Wipes.png')} alt="Top_Categories_Personal_Care" className='' />
                                         <label>Diapering</label>
@@ -28,7 +28,7 @@ export default function Supplements() {
                                 </Link>
                                 <Link to="">
 
-                                    <div class="tc-inner">
+                                    <div className="tc-inner">
 
                                         <img src={require('../Assets/images/product-img/Baby_Essential.png')} alt="Top_Categories_Personal_Care" className='' />
                                         <label>Baby Essential</label>
@@ -37,7 +37,7 @@ export default function Supplements() {
 
                                 <Link to="">
 
-                                    <div class="tc-inner">
+                                    <div className="tc-inner">
 
                                         <img src={require('../Assets/images/product-img/Baby_skin_Hair.png')} alt="Top_Categories_Personal_Care" className='' />
                                         <label>Baby Skin & Hair</label>
@@ -51,21 +51,21 @@ export default function Supplements() {
 
                             <div className="tc-outer">
                                 <Link to="">
-                                    <div class="tc-inner">
+                                    <div className="tc-inner">
                                         <img src={require('../Assets/images/product-img/Diapers_Wipes.png')} alt="Top_Categories_Personal_Care" className='' />
                                         <label>Diapering</label>
                                     </div>
                                 </Link>
                                 
                                 <Link to="">
-                                    <div class="tc-inner">
+                                    <div className="tc-inner">
                                         <img src={require('../Assets/images/product-img/Baby_Essential.png')} alt="Top_Categories_Personal_Care" className='' />
                                         <label>Baby Essential</label>
                                     </div>
                                 </Link>
 
                                 <Link to="">
-                                    <div class="tc-inner">
+                                    <div className="tc-inner">
                                         <img src={require('../Assets/images/product-img/Baby_skin_Hair.png')} alt="Top_Categories_Personal_Care" className='' />
                                         <label>Baby Skin & Hair</label>
                                     </div>

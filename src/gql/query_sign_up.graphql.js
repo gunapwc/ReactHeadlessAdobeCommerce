@@ -1,19 +1,28 @@
-import { gql } from '@apollo/client';
+import { gql } from "@apollo/client";
 
 export default gql`
-mutation {
-  createCustomer(
-      input: {
-          firstname: "Demo"
-          lastname: "Test"
-          email: "demotest@gmail.com"
-          password: "Test@123"
-          is_subscribed: true
-      }
+  mutation (
+    $firstname: String!
+    $lastname: String!
+    $email: String!
+    $password: String!
+    $is_subscribed: Boolean
   ) {
-      customer {
-          firstname lastname email is_subscribed
+    createCustomer(
+      input: {
+        firstname: $firstname
+        lastname: $lastname
+        email: $email
+        password: $password
+        is_subscribed: $is_subscribed
       }
+    ) {
+      customer {
+        firstname
+        lastname
+        email
+        is_subscribed
+      }
+    }
   }
-}
 `;

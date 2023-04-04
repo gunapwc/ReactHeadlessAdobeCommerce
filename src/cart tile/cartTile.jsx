@@ -33,10 +33,10 @@ const CartTile = ({ valuecart, updatesquantity }) => {
                         <h3>Sub-Total</h3>
                         <h2>{valuecart.product_price * valuecart.product_quantity}</h2>
                     </div>
-                    <div className="icon-button">
-                        <button><img src="https://w7.pngwing.com/pngs/799/396/png-transparent-heart-gold-heart-icon.png" width="40px"/></button>
+                    <div className="icon-button icon-left">
+                        <button className="btn-icon-pd"><i class="fa fa-heart"></i></button>
                         <br/>
-                        <button onClick={deletecart}><img src="https://w7.pngwing.com/pngs/29/45/png-transparent-delete-key-logo-button-text-rectangle-logo.png" width="40px"/></button>
+                        <button className="btn-icon-pd" onClick={deletecart}><i class="fa fa-trash"></i></button>
                     </div>
                 </div>
             </div>

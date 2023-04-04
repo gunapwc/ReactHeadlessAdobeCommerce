@@ -15,17 +15,27 @@ const MyAccount = () => {
             {
                 key: "SavedAddresses",
                 name: "Saved Addresses",
-                link: "savedadresses"
+                link: "SavedAddresses"
             },
             {
-                key: "OrderDetail",
-                name: "Order Detail",
-                link: "orderdetail"
+                key: "OrderDetails",
+                name: "Order Details",
+                link: "orderdetails"
             },
             {
                 key: "Favourite",
                 name: "Favourite",
                 link: "wishlist"
+            },
+            {
+                key: "ChangePassword",
+                name: "Change Password",
+                link: "changepassword"
+            },
+            {
+                key: "Logout",
+                name: "Logout",
+                link: "Logout"
             }
         ])
     },[])
