@@ -1,51 +1,61 @@
-import React, {useState,useEffect} from "react";
-import { Switch, Route, NavLink, Link, Redirect, useNavigate } from "react-router-dom";
-import "./savedaddress.scss"
+import React, { useState, useEffect } from "react";
+import {
+  Switch,
+  Route,
+  NavLink,
+  Link,
+  Redirect,
+  useNavigate,
+} from "react-router-dom";
+import "./savedaddress.scss";
 
 import mutationSavedAddress from "../gql/query_saved_address_list.graphql";
-import { useQuery,useMutation } from '@apollo/client';
+import { useQuery, useMutation } from "@apollo/client";
 
 const SavedAddress = () => {
+  const { loading, error, data } = useQuery(mutationSavedAddress);
 
-    const { loading, error, data } = useQuery(mutationSavedAddress);
-
-  const [savedaddress, setSavedAddress] = React.useState([]);
+  const [saveaddress, setSavedAddress] = React.useState([]);
 
   React.useEffect(() => {
     console.log(data);
 
     if (data) {
-      setSavedAddress(data?.customer);
-      console.log(savedaddress);
+      setSavedAddress(data?.customer?.addresses);
+      console.log(data?.customer?.addresses);
+      console.log('address--> ' + data?.customer?.addresses[0]['street']);
     }
   }, [data]);
 
+  return (
+    <>
+      <div className="saved-address-body-wrap">
+     
+        <div className="saved-address-body">
+          <h2 className="saved-address-title">Manage Addresses</h2>
 
-    return (
-        <>
-        <div className="saved-address-body-wrap">
-            <div className="saved-address-body">
-                <h2 className="saved-address-title">Manage Addresses</h2>
-                
-                {savedaddress.map((value,i) => {
+          {data?.customer?.addresses.map((value, i) => {
             return (
-
-                <div className="row">
-                    <div className="col-md-6">                   
-                        <div className="home-address"> 
-                            <div className="home-icon">
-                                <i class="fa fa-home"></i>
-                            </div>                      
-                            <h4 className="home-add-title">Home</h4>
-                            <p className="home-loc">{value.postcode}</p>
-                            <div className="home-add-wrap">
-                                <a href="javascript:void(0)" className="home-edit-link">Edit</a>
-                                <a href="javascript:void(0)" className="home-edit-delete">Delete</a>
-                            </div>
-                        </div>
+              <div className="row">
+                <div className="col-md-6">
+                  <div className="home-address">
+                    <div className="home-icon">
+                      <i class="fa fa-home"></i>
                     </div>
+                    <h4 className="home-add-title">Home</h4>
+                    <p className="home-loc">{data?.customer?.addresses[i]['street']}</p>
+                    <div className="home-add-wrap">
+                      <a href="javascript:void(0)" className="home-edit-link">
+                        Edit
+                      </a>
+                      <a href="javascript:void(0)" className="home-edit-delete">
+                        Delete
+                      </a>
+                    </div>
+                  </div>
+                </div>
 
-                    {/* <div className="col-md-6">
+                {/* <div className="col-md-6">
                         <div className="office-address">
                              <div className="office-icon">
                                 <i class="fa fa-bookmark"></i>
@@ -58,35 +68,33 @@ const SavedAddress = () => {
                             </div>
                         </div>
                     </div> */}
+              </div>
+           );
+        })}
 
-                </div>
-
-);
-})}
-
-
-                <div className="row">
-                    <div className="col-md-6">
-                        <Link to="/newaddress">
-                            <a href="javascript:void(0)" className="new-add-link">
-                                <div className="new-address">
-                                    <span className="new-add-title"><i class="fa fa-plus-circle"></i></span>
-                                    <p className="new-loc">Add New Address</p> 
-                                </div>
-                            </a> 
-                        </Link>
-                    </div>
-                </div>  
-
+          <div className="row">
+            <div className="col-md-6">
+              <Link to="/newaddress">
+                <a href="javascript:void(0)" className="new-add-link">
+                  <div className="new-address">
+                    <span className="new-add-title">
+                      <i class="fa fa-plus-circle"></i>
+                    </span>
+                    <p className="new-loc">Add New Address</p>
+                  </div>
+                </a>
+              </Link>
             </div>
+          </div>
         </div>
+         
+      </div>
 
-        <div className="save-btn-wrap">
-            <button>Save</button>
-        </div>
-        </>
-
-    );
+      <div className="save-btn-wrap">
+        <button>Save</button>
+      </div>
+    </>
+  );
 };
 
 export default SavedAddress;
