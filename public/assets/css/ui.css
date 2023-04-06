@@ -858,6 +858,7 @@ a[class*=card]:hover .title {
 /* GRID STYLE PRODUCT ITEM */
 .card-product-grid {
   margin-bottom: 20px;
+  border-radius: 2px;
 }
 .card-product-grid .img-wrap {
   border-radius: 0.2rem 0.2rem 0 0;

@@ -567,7 +567,7 @@ nav.nav-items {
                         height: 2px;
                         position: absolute;
                         bottom: -2px;
-                        background: $bg-blue-color;
+                        background: #38b18f;
                         left: 0;
                     }
 
@@ -623,7 +623,8 @@ nav.nav-items {
     }
 
     .subscribe-btn {
-        background-color: $bg-blue-color;
+        background-color: #38b18f;
+    font-weight: 600;
         min-height: 41px;
         width: 100%;
         border: none;

@@ -214,6 +214,8 @@ a {
         margin-bottom: 10px;
         padding-top: 20px;
         font-weight: 600;
+        min-height: 120px;
+
     }
 
     p {
@@ -604,8 +606,143 @@ button.btn-icon-pd:hover {
     font-weight: 600;
 }
 
-
-
-
-
 // mini-cart-css-end
+
+
+// plp-page start
+
+.plp-item {
+    font-size: 18px;
+}
+
+.plp-sort {
+    padding: 7px 52px 7px 12px;
+    border-radius: 2px;
+}
+
+.plp-sort:focus {
+    box-shadow: none;
+    border: 1px solid #38b18f;
+}
+
+.btn-list, .btn-grid {
+    border-radius: 2px;
+}
+
+.btn-list:focus, .btn-grid:focus {
+    box-shadow: none;
+}
+
+a.title {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.badge-btn {
+    border-radius: 2px;
+}
+
+.btn-cart {
+    background-color: #38b18f;
+    border-radius: 2px;
+    border: 1px solid #38b18f;
+    font-weight: 600;
+}
+
+.btn-cart:hover {
+    background-color: #259d7b !important;
+    border: 1px solid #259d7b !important;
+}
+
+.btn-cart:focus {
+    box-shadow: none !important;
+}
+
+.page-item.active .page-view-link {
+    background-color: #38b18f;
+    border-color: #38b18f;
+}
+
+.page-view-link {
+    color: #38b18f;
+    border-radius: 2px;
+}
+
+.page-link {
+    border-radius: 2px !important;
+}
+
+.page-link:focus {
+    box-shadow: none;
+}
+
+.page-view-link:hover {
+    color: #38b18f;
+}
+
+a.title:hover {
+    color: #38b18f !important;
+}
+
+.form-search-list {
+    border: 1px solid #bebebe;
+}
+
+.form-search-list:focus {
+    border: 1px solid #38b18f;
+    box-shadow: none;
+}
+
+.find-btn {
+    border: 1px solid #bebebe;
+    border-radius: 0 2px 2px 0;
+}
+
+.find-btn:focus {
+    border: 1px solid #38b18f;
+    box-shadow: none;
+}
+
+h6.title {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+h6.title:hover {
+    color: #38b18f;
+}
+
+.card-header a:hover {
+    color: #38b18f;
+}
+
+.list-menu li {
+    padding: 4px 0;   
+}
+
+.list-menu li a:hover {
+    color: #38b18f !important;
+}
+
+.custom-control-input:checked ~ .custom-control-check::before {
+    color: #fff;
+    border-color: #38b18f;
+    background-color: #38b18f;
+}
+
+.form-price-wid:focus {
+    box-shadow: none;
+    border: 1px solid #38b18f;
+}
+
+.filter-card {
+    border-radius: 2px;
+}
+
+.btn-border {
+    border-radius: 2px;
+}
+
+
+
+// plp-page end
