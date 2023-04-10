@@ -9,7 +9,33 @@ import {
   useNavigate,
 } from "react-router-dom";
 
+import { useForm } from "react-hook-form";
+
+import mutationPlaceOrder from "../gql/query_place_order.graphql";
+import { useQuery,useMutation } from '@apollo/client';
+
+
 export const Checkout = () => {
+
+  const { register, handleSubmit, watch, formState: { errors } } = useForm();
+  
+  const [submitPlaceOrder] = useMutation(mutationPlaceOrder, {
+    fetchPolicy: "no-cache",
+    onCompleted: (response) => {
+      
+    },
+    onError: (error) => {
+      console.log(error);
+    },
+  });
+
+  const onSubmit = (data) => {
+    console.log('Click--->');
+    submitPlaceOrder({ variables:  data });
+    console.log(data);
+  };
+
+
   return (
     <div class="checkout-body row m-0">
       <div className="col-md-5">
@@ -181,9 +207,16 @@ export const Checkout = () => {
               <p class="payment-details-price-total">Rs 408.00</p>
             </div>
           </div>
-          <Link className="nav-link" to={"/order-summary"}>
-            <button class="checkout-place-order">Place Order</button>
-          </Link>
+
+          <form
+            className="login-form-wrap"
+            action="#"
+            onSubmit={handleSubmit(onSubmit)}
+          >
+            {/* <Link className="nav-link" to={"/order-summary"}> */}
+              <button class="checkout-place-order">Place Order</button>
+            {/* </Link> */}
+          </form>
         </div>
       </div>
     </div>
