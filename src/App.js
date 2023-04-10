@@ -27,8 +27,11 @@ import Profile from "./My Account/profile";
 import { About } from "./aubout/About";
 import { Suspense, lazy } from "react";
 
-import "react-notifications/lib/notifications.css";
-import { NotificationContainer } from "react-notifications";
+
+import 'react-notifications/lib/notifications.css';
+import { NotificationContainer } from 'react-notifications';
+import Wishlist from "./wishlist/wishlist";
+
 
 const Homepage = React.lazy(() => import("./homepagecomp/Apphome"));
 
@@ -59,9 +62,29 @@ function App() {
               <Route path="changepassword" element={<ChangePassword />} />
               <Route path="savedaddress" element={<SavedAddress />} />
 
+
               <Route path="profile" element={<Profile />} />
             </Route>
             <Route path="newaddress" element={<NewAddress />} />
+
+          <Route exact path="/" element={<Homepage />} />
+          <Route path='/track-order' element={<TrackMyOrder />} />
+          <Route path='/product-detail-page' element={<ProductDetailPage />} />
+          <Route path="/cart-page" element={<CartPage />} />
+          <Route path='/product-list' element={<ProductListpage />} />
+          <Route path='/checkout' element={<Checkout />} />
+          <Route path='/order-summary' element={<OrderSummeryPage />} />
+          <Route path='/order-details' >
+            <Route path=':orderId' element={<OrderDetailPage/>} />
+          </Route>
+          <Route path="/my-account" element={<MyAccount/>}>
+            <Route path='orderdetail' element={<MyOrders />} />
+            <Route path='changepassword' element={<ChangePassword />} />        
+            <Route path='savedaddress' element={<SavedAddress />} /> 
+            
+            <Route path='profile' element={<Profile />} />  
+            <Route path='wishlist' element={<Wishlist/>}/>
+          </Route>
 
             <Route path="/register" element={<Register />} />
             <Route path="/login" element={<Login />} />

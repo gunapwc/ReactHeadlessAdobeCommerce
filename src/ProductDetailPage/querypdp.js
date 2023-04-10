@@ -5,7 +5,7 @@ const queryPdp = (id) => {
     return gql`query {
         products(filter: 
           {
-            sku: {eq: "1 Month Membership"}})  {
+            sku: {eq: "${id}"}})  {
           items {
               name
                   description {
