@@ -24,6 +24,9 @@ import ForgotPassword from "./login/forgotpassword";
 import SavedAddress from "./My Account/savedaddress";
 import NewAddress from "./My Account/newaddress";
 import Profile from "./My Account/profile";
+import { Suspense, lazy } from "react";
+<Suspense fallback={<div>Loading... </div>}>
+</Suspense>
 
 const Homepage = React.lazy(() => import("./homepagecomp/Apphome"));
 
@@ -31,6 +34,9 @@ function App() {
   return (
     <Router>
       <div>
+      <Suspense fallback={<div>Loading... </div>}>
+
+
         <Header />
 
         <Routes>
@@ -59,6 +65,7 @@ function App() {
         </Routes>
 
         <Footer />
+        </Suspense>
       </div>
     </Router>
   );

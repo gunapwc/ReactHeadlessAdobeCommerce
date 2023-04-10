@@ -70,7 +70,7 @@ function Header() {
                     <div className="offermessage">
                         <div className="messages">Shop For AED 199 & Get Extra 10% Off*. Code: EXTRA10.*T&C </div>
 
-                        <label class="close-header-top-ads cursorP" onClick={onClose}></label>
+                        <label class="close-header-top-ads cursorP mb-0" onClick={onClose}></label>
                     </div>
                     : false}
 
@@ -89,7 +89,7 @@ function Header() {
                                 defaultValue={selectedOption}
                                 onChange={setSelectedOption}
                                 options={options}
-                                placeholder="Choose Category"
+                                placeholder="All Categories"
                                 readonly />
 
                             <form>
@@ -131,14 +131,14 @@ function Header() {
                     <nav className="nav-items">
 
                         <Link class="nav-link"><span>New Arrivals </span></Link>
-                        <Link class="nav-link"><span>Best Seller</span></Link>
+                        <Link class="nav-link"><span>Best Sellers</span></Link>
                         <Link class="nav-link"><span>Category</span></Link>
-                        <Link class="nav-link"><span>Brand</span></Link>
-                        <Link class="nav-link" ><span>Offer</span></Link>
+                        <Link class="nav-link"><span>Brands</span></Link>
+                        <Link class="nav-link" ><span>Offers</span></Link>
                         {/* to={'/product-list'} */}
                         <Link class="nav-link" to={'/order-summary'}><span>Track My Order</span></Link>
                         {/* to={'/track-order'} */}
-                        <Link class="nav-link"><span>Clearance Sale</span></Link>
+                        <Link class="nav-link nav-hyber-link"><span>Clearance Sale</span></Link>
 
                     </nav>
                 </div>

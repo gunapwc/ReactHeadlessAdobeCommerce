@@ -88,7 +88,9 @@ export default function Exclusiveproduct() {
          <div className='cdz-brand-slider-wrap popular-categories-wrapper'>
              <div className='section-container'>
 
-                 <div className='cdz-block-title'></div>
+                 <div className='cdz-block-title'>
+                        <p>Best brands for you this</p> 
+                 </div>
 
                  <div className='cdz-brand-top-categories p-t5'>
 
