@@ -9,26 +9,20 @@ import Discoverbrand from "./Discover-brands-section";
 import Ourservice from "./Ourservice-section";
 import Supplements from "./Supplements-section";
 
-
 function Apphome() {
-    return (
-        <div>
-            <Slider />
-            <Exclusiveproduct />
-            <Winterseason />
-            <Missingoffer />
-            <Supplements />
-            <Brandexplore />
-            <Handpicked />
-            <Discoverbrand />
-            <Ourservice />
-
-        </div>
-    )
-
+  return (
+    <div>
+      <Slider />
+      <Exclusiveproduct />
+      <Winterseason />
+      <Missingoffer />
+      <Supplements />
+      <Brandexplore />
+      <Handpicked />
+      <Discoverbrand />
+      <Ourservice />
+    </div>
+  );
 }
 
-
 export default Apphome;
-
-

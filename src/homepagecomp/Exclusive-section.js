@@ -45,32 +45,32 @@ export default function Exclusiveproduct() {
                         <OwlCarousel id="carousel-product" className="owl-carousel owl-theme" {...options}>
 
 
-                            <div className="item">
+                            <div class="item">
 
                                 <img src={require('../Assets/images/product-img/BabyRemedies.jpg')} alt="BabyRemedies.jpg" />
 
                             </div>
-                            <div className="item">
+                            <div class="item">
                                 <img src={require('../Assets/images/product-img/BabyRemedies.jpg')} alt="BabyRemedies.jpg" />
 
 
                             </div>
-                            <div className="item">
+                            <div class="item">
                                 <img src={require('../Assets/images/product-img/Popular_Categories-Beauty_1.jpg')} alt="BabyRemedies.jpg" />
 
 
                             </div>
-                            <div className="item">
+                            <div class="item">
                                 <img src={require('../Assets/images/product-img/Mother_Baby.jpg')} alt="BabyRemedies.jpg" />
 
 
                             </div>
-                            <div className="item">
+                            <div class="item">
                                 <img src={require('../Assets/images/product-img/Mother_Baby.jpg')} alt="BabyRemedies.jpg" />
 
 
                             </div>
-                            <div className="item">
+                            <div class="item">
                                 <img src={require('../Assets/images/product-img/Mother_Baby.jpg')} alt="BabyRemedies.jpg" />
 
 
@@ -88,7 +88,9 @@ export default function Exclusiveproduct() {
          <div className='cdz-brand-slider-wrap popular-categories-wrapper'>
              <div className='section-container'>
 
-                 <div className='cdz-block-title'></div>
+                 <div className='cdz-block-title'>
+                        <p>Best brands for you this</p> 
+                 </div>
 
                  <div className='cdz-brand-top-categories p-t5'>
 
@@ -96,32 +98,32 @@ export default function Exclusiveproduct() {
                      <OwlCarousel id="carousel-product" className="owl-carousel owl-theme" {...options}>
 
 
-                         <div className="item">
+                         <div class="item">
 
                              <img src={require('../Assets/images/product-img/Popular_Categories-Beauty_1.jpg')} alt="Popular_Categories-Beauty_1" />
 
                          </div>
-                         <div className="item">
+                         <div class="item">
                              <img src={require('../Assets/images/product-img/Sports_Nutrition.jpg')} alt="Sports_Nutrition" />
 
 
                          </div>
-                         <div className="item">
+                         <div class="item">
                              <img src={require('../Assets/images/product-img/Hair_Concern.jpg')} alt="Hair_Concern" />
 
 
                          </div>
-                         <div className="item">
+                         <div class="item">
                              <img src={require('../Assets/images/product-img/Mother_Baby.jpg')} alt="BabyRemedies" />
 
 
                          </div>
-                         <div className="item">
+                         <div class="item">
                              <img src={require('../Assets/images/product-img/Mother_Baby.jpg')} alt="BabyRemedies" />
 
 
                          </div>
-                         <div className="item">
+                         <div class="item">
                              <img src={require('../Assets/images/product-img/Mother_Baby.jpg')} alt="BabyRemedies.jpg" />
                          </div>
 

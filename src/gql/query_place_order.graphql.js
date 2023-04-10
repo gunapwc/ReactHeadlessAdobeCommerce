@@ -1,16 +1,11 @@
-import { gql } from '@apollo/client';
+import { gql } from "@apollo/client";
 
 export default gql`
-mutation {
-  setPaymentMethodAndPlaceOrder(input: {
-      cart_id: "1SMwDSgadDJgfQiN3ecoZyexoq5plnfK"
-      payment_method: {
-          code: "checkmo"
-      }
-  }) {
+  mutation {
+    placeOrder(input: { cart_id: "1M0DjLJxxrh42PAIbFWamBHwwYPKkGGt" }) {
       order {
-          order_id
+        order_number
       }
+    }
   }
-}
 `;

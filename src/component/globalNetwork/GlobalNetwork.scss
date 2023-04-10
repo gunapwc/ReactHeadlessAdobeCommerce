@@ -1,0 +1,70 @@
+
+
+.globalNet {
+  background: linear-gradient(to right, #144d92, #0a2749);
+  color: #FFFFFF;  padding: 4vw 0;
+  p {
+    font-size: 16px;
+    text-align: center;
+    padding-bottom: 12px;
+    white-space: nowrap;
+  }
+  h1 {
+    font-size: 72px;
+    line-height: 89px;
+    margin-bottom: 0;
+    text-align: center;
+  }
+  h2 {
+    font-size: 32px;
+    line-height: 30px;
+    text-align: center;
+    margin-bottom: 0;
+  }
+  .container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  &_card {
+    display: flex;
+    gap: 10px;
+    min-width: 560px;
+    max-width: 100%;
+    @media screen and (max-width: 767px) {
+      flex-direction: column;
+      max-width: 200px;
+      min-width: 70%;
+    }
+
+    &_first {
+      border-radius: 10px;
+      background-color: #00b38c;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    &_last {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      &_inner {
+        background-color: #00b38c;
+        border-radius: 10px;
+        padding: 20px;
+      }
+    }
+  }
+  &_img {
+    margin: auto;
+    aspect-ratio: 1;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

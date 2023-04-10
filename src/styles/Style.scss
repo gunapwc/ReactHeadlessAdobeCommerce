@@ -7,7 +7,7 @@
 .offermessage {
     background-color: $bg-blue-color;
     color: $white;
-    padding: 10px;
+    padding: 9px;
     display: flex;
     justify-content: space-between;
     position: relative;
@@ -81,18 +81,18 @@
 
     .searchsec {
         display: flex;
-        flex-basis: 550px;
+        flex-basis: 538px;
+        margin-left: 12%;
 
         .css-b62m3t-container {
             width: 100%;
-            max-width: 180px;
+            max-width: 147px;
 
             .css-13cymwt-control {
                 background-color: #00b18f;
-                min-height: 36px;
+                min-height: 42px;
                 border-radius: 2px 0px 0px 2px;
                 border-color: #38b18f;
-                padding-left: 6px;
 
                 .css-1dimb5e-singleValue {
                     color: $white;
@@ -110,7 +110,7 @@
 
             .css-1jqq78o-placeholder {
                 color: $white;
-                font-size: 12px;
+                font-size: 14px;
             }
 
             .css-1u9des2-indicatorSeparator {
@@ -124,10 +124,10 @@
             width: 100%;
 
             input {
-                max-height: 38px;
-                padding: 12px 8px 10px 14px;
+                max-height: 42px;
+                padding: 21px 8px 19px 16px;
                 width: 100%;
-                font-size: 12px;
+                font-size: 14px;
                 color: #707070;
                 font-style: normal;
                 border: 1px solid #ddd;
@@ -142,7 +142,7 @@
     .headers-signin-part {
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: space-evenly;
         width: 100%;
         max-width: 350px;
 
@@ -217,12 +217,20 @@
 
 nav.nav-items {
     display: flex;
-    padding: 20px;
-    justify-content: center;
+    padding: 14px 30px;
+    justify-content: space-evenly;
+    width: 900px;
+    margin: 0 auto;
 
     .nav-link {
-        flex-basis: 150px;
+        // flex-basis: 150px;
+        font-size: 15px;
+    font-weight: 600;
     }
+}
+
+.nav-hyber-link, .nav-hyber-link:hover {
+    color: red;
 }
 
 #carousel-banner {
@@ -331,7 +339,7 @@ nav.nav-items {
 
 .cdz-brand-top-categories {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     flex-wrap: wrap;
 
     @media(max-width:992px) {
@@ -344,13 +352,14 @@ nav.nav-items {
     }
 
     .missitems {
-        width: 22%;
-        padding: 15px;
+        width: 24%;
+    padding: 10px 0;
 
     }
 
     .placeof-circle-items {
-        padding: 15px;
+        // padding: 15px;
+        margin: 18px 0;
 
         @media(max-width:992px) {
             width: 30%;
@@ -567,7 +576,7 @@ nav.nav-items {
                         height: 2px;
                         position: absolute;
                         bottom: -2px;
-                        background: $bg-blue-color;
+                        background: #38b18f;
                         left: 0;
                     }
 
@@ -623,7 +632,8 @@ nav.nav-items {
     }
 
     .subscribe-btn {
-        background-color: $bg-blue-color;
+        background-color: #38b18f;
+    font-weight: 600;
         min-height: 41px;
         width: 100%;
         border: none;
@@ -632,4 +642,12 @@ nav.nav-items {
         text-transform: none;
         color: $white;
     }
+}
+
+.authorization-link li a:hover {
+    color: #38b18f;
+}
+
+.nav-link:hover {
+    color: #38b18f !important;
 }

@@ -1,0 +1,31 @@
+.innerSection {
+  &_title {
+    font-weight: 700;
+    padding-top: 30px;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+    color: #c42c0e;
+    margin-bottom: 10px;
+  }
+  &_subTitle {
+    color:#164D92;
+    letter-spacing: 0.64px;
+    font-size: clamp(20px, 5vw, 32px);
+    text-transform: capitalize;
+    font-weight: 600;
+    line-height: clamp(24px, 5vw, 42px);
+    margin-bottom: 6px;
+  }
+  &_detail {
+    color: #464749;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.75px;
+    cursor: pointer;
+    font-size: 16px;
+    padding-bottom: 20px;
+    padding-top: 10px;
+  }
+}
