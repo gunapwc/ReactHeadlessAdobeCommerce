@@ -1,0 +1,51 @@
+
+
+.OurValues{
+    background: #EEF5FC;;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    border-radius: 20px;
+    &_section{
+        width: calc((100% / 2) - 20px);
+        display: flex;
+        gap: 10px;
+        @media screen and (max-width:992px) {
+            width: 100%;
+        }
+       
+        &_svg{
+
+            &:hover
+            path{
+                stroke: rgba(255, 0, 0, 0.158) ;
+            }
+            
+        }
+        &_details{
+            h6{
+                color: #c42c0e;
+                font-size: 16px;
+                letter-spacing: 1.6px;
+                text-transform: uppercase;
+                font-weight: bold;
+                line-height: 19px;
+                margin-bottom: 10px;
+            }
+            P{
+                font-size: 14px;
+                line-height: 24px;
+                letter-spacing: 0.75px;
+                cursor: pointer;
+                color: #464749;
+            }
+            h5{
+                color: #000000;
+                letter-spacing: 0.4px;
+                line-height: 19px;
+                padding-top: 5px;
+            }
+        }
+    }
+}

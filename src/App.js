@@ -10,7 +10,7 @@ import Footer from "./footer";
 import { TrackMyOrder } from "./pages/trackmyorder";
 import ProductDetailPage from "./ProductDetailPage/productDetailpage";
 import CartPage from "./CartPage/cartPage";
-import { ProductListpage } from "./pages/sampledemo";
+import { ProductListpage } from "./pages/product_list";
 import { Checkout } from "./pages/checkout";
 import Ordersummary from "./pages/ordersummary";
 import OrderSummeryPage from "./orderSummeryPage/orderSummeryPage";
@@ -24,10 +24,14 @@ import ForgotPassword from "./login/forgotpassword";
 import SavedAddress from "./My Account/savedaddress";
 import NewAddress from "./My Account/newaddress";
 import Profile from "./My Account/profile";
+import { About } from "./aubout/About";
+import { Suspense, lazy } from "react";
+
 
 import 'react-notifications/lib/notifications.css';
 import { NotificationContainer } from 'react-notifications';
 import Wishlist from "./wishlist/wishlist";
+
 
 const Homepage = React.lazy(() => import("./homepagecomp/Apphome"));
 
@@ -35,9 +39,33 @@ function App() {
   return (
     <Router>
       <div>
-        <Header />
+        <Suspense fallback={<div>Loading... </div>}>
+          <Header />
 
-        <Routes>
+          <Routes>
+            <Route exact path="/" element={<Homepage />} />
+            <Route path="/about-Us" element={<About />} />
+            <Route path="/track-order" element={<TrackMyOrder />} />
+            <Route
+              path="/product-detail-page"
+              element={<ProductDetailPage />}
+            />
+            <Route path="/cart-page" element={<CartPage />} />
+            <Route path="/product-list" element={<ProductListpage />} />
+            <Route path="/checkout" element={<Checkout />} />
+            <Route path="/order-summary" element={<OrderSummeryPage />} />
+            <Route path="/order-details">
+              <Route path=":orderId" element={<OrderDetailPage />} />
+            </Route>
+            <Route path="/my-account" element={<MyAccount />}>
+              <Route path="orderdetail" element={<MyOrders />} />
+              <Route path="changepassword" element={<ChangePassword />} />
+              <Route path="savedaddress" element={<SavedAddress />} />
+
+
+              <Route path="profile" element={<Profile />} />
+            </Route>
+            <Route path="newaddress" element={<NewAddress />} />
 
           <Route exact path="/" element={<Homepage />} />
           <Route path='/track-order' element={<TrackMyOrder />} />
@@ -57,16 +85,15 @@ function App() {
             <Route path='profile' element={<Profile />} />  
             <Route path='wishlist' element={<Wishlist/>}/>
           </Route>
-          <Route path='newaddress' element={<NewAddress />} /> 
 
-          <Route path='/register' element={<Register />} />
-          <Route path='/login' element={<Login />} />
-          <Route path='/forgotpassword' element={<ForgotPassword />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/forgotpassword" element={<ForgotPassword />} />
+          </Routes>
 
-        </Routes>
-
-        <Footer />
-        <NotificationContainer />
+          <Footer />
+          <NotificationContainer />
+        </Suspense>
       </div>
     </Router>
   );

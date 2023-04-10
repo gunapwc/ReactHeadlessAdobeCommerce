@@ -1,0 +1,22 @@
+
+
+.emg {
+  border: 2px solid #faa61a;
+  border-radius: 19px;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  margin: 10px 0px;
+  &_img {
+    padding: 0 15px;
+    border-right: 2px solid #c42c0e;
+    text-align: center;
+    img {
+      width: 40px;
+    }
+  }
+  &_text {
+    padding: 0px 2vw 0px 4vw;
+    color: #464749;
+  }
+}

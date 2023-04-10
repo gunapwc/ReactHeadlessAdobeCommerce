@@ -1,0 +1,38 @@
+
+.banner{
+    margin-top: 40px;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    max-height: 300px;
+    &_text {
+    width: 350px;
+    max-width: 100%;
+    background-color: #12A77A;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    color: #FFFFFF;
+    h2{
+font-size: clamp( 16px , 2vw, 24px);
+    }
+    h6{
+        font-size: clamp( 12px , 2vw, 14px);
+    }
+   }
+   &_img {
+    z-index: -1;
+    width: 100%;
+    img{
+     width: 101%;
+    margin-left: -1%;
+    height: 100%;
+    object-fit: cover;
+    object-position: left;
+
+    }
+}
+}
