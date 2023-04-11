@@ -12,12 +12,39 @@ import {
 import { useForm } from "react-hook-form";
 
 import mutationPlaceOrder from "../gql/query_place_order.graphql";
+import mutationSetbillingAddress from "../gql/query_set_billing_address.graphql";
+import mutationCartProductdetails from "../gql/query_cart_product_details.graphql";
 import { useQuery,useMutation } from '@apollo/client';
 
 
 export const Checkout = () => {
 
   const { register, handleSubmit, watch, formState: { errors } } = useForm();
+
+  const { loading, error, data } = useQuery(mutationCartProductdetails);
+
+  const [cartdetails, getCartProduct] = React.useState([]);
+
+  React.useEffect(() => {
+    console.log(data);
+
+    if (data) {
+      getCartProduct(data?.cart);
+      console.log('cartdetails --> ' + data?.cart?.prices?.grand_total?.value);
+      console.log('cartdetails --> ' + data?.cart?.items[0].product?.name);
+
+      // AMOUNT
+      console.log('cartdetails --> ' + data?.cart?.prices?.grand_total?.value);
+      console.log('cartdetails --> ' + data?.cart?.prices?.grand_total?.currency);
+
+
+      // ADDRESS
+      console.log('cartdetails --> ' + data?.cart?.billing_address?.street);
+
+      console.log('Price Value --> ' +data?.cart?.items[0].prices?.price.value);
+
+    }
+  }, [data]);
   
   const [submitPlaceOrder] = useMutation(mutationPlaceOrder, {
     fetchPolicy: "no-cache",
@@ -29,10 +56,9 @@ export const Checkout = () => {
     },
   });
 
-  const onSubmit = (data) => {
+  const onSubmit = (datalogin) => {
     console.log('Click--->');
-    submitPlaceOrder({ variables:  data });
-    console.log(data);
+    submitPlaceOrder({ variables:  datalogin });
   };
 
 
@@ -44,8 +70,28 @@ export const Checkout = () => {
           <p class="order-summary-para">
             Check your items. And select a suitable shipping method.
           </p>
+         
+         
           <div class="order-summary-product-wrap py-6">
+            
+          {/* {data.1map((value,i) => { */}
+            {/* return ( */}
             <div class="order-summary-product">
+              <img
+                class="order-summary-product-img"
+                src="http://localhost:3000/static/media/xretail6_02.jpg.pagespeed.ic.XP0T-m8rXz.9bceaf8eda985c6475f7.webp"
+                alt=""
+              />
+              <div class="order-summary-product-content ml-6">
+                <span class="order-summary-product-title">
+                  {data?.cart?.items[0].product?.name}
+                </span>
+                <p class="order-summary-product-price"> {data?.cart?.items[0].prices?.price.value}</p>
+              </div>
+            </div>
+             {/* );
+            })} */}
+            {/* <div class="order-summary-product">
               <img
                 class="order-summary-product-img"
                 src="http://localhost:3000/static/media/xretail6_02.jpg.pagespeed.ic.XP0T-m8rXz.9bceaf8eda985c6475f7.webp"
@@ -57,20 +103,8 @@ export const Checkout = () => {
                 </span>
                 <p class="order-summary-product-price">Rs 138.99</p>
               </div>
-            </div>
-            <div class="order-summary-product">
-              <img
-                class="order-summary-product-img"
-                src="http://localhost:3000/static/media/xretail6_02.jpg.pagespeed.ic.XP0T-m8rXz.9bceaf8eda985c6475f7.webp"
-                alt=""
-              />
-              <div class="order-summary-product-content ml-6">
-                <span class="order-summary-product-title">
-                  Nike Air Max Pro 8888 - Super Light
-                </span>
-                <p class="order-summary-product-price">Rs 138.99</p>
-              </div>
-            </div>
+            </div> */}
+
           </div>
 
           <p class="shipping-method-heading">Shipping Methods</p>
@@ -123,6 +157,7 @@ export const Checkout = () => {
               <input
                 type="text"
                 id="email"
+                value={data?.cart?.email}
                 name="email"
                 class="form-control form-field"
                 placeholder="your.email@gmail.com"
@@ -136,6 +171,7 @@ export const Checkout = () => {
                 type="text"
                 id="card-holder"
                 name="card-holder"
+                value={data?.cart?.billing_address?.firstname +' '+data?.cart?.billing_address?.lastname }
                 class="form-control form-field"
                 placeholder="Your full name here"
               />
@@ -173,6 +209,7 @@ export const Checkout = () => {
                 type="text"
                 id="billing-address"
                 name="billing-address"
+                value={data?.cart?.billing_address?.street}
                 class="form-control form-field form-wrap-add"
                 placeholder="Street Address"
               />
@@ -180,12 +217,14 @@ export const Checkout = () => {
               <select
                 type="text"
                 name="billing-state"
+                
                 class="form-control form-field form-wrap-state"
               >
-                <option value="State">State</option>
+                <option value="State">{data?.cart?.billing_address?.region?.label}</option>
               </select>
               <input
                 type="text"
+                value={data?.cart?.billing_address?.country?.code}
                 name="billing-zip"
                 class="form-control form-field form-wrap-zip"
                 placeholder="ZIP"
@@ -204,7 +243,7 @@ export const Checkout = () => {
             </div>
             <div class="mt-6 flex items-center justify-between">
               <p class="payment-details-total">Total</p>
-              <p class="payment-details-price-total">Rs 408.00</p>
+              <p class="payment-details-price-total">{data?.cart?.prices?.grand_total?.currency + ' ' + data?.cart?.prices?.grand_total?.value }</p>
             </div>
           </div>
 
