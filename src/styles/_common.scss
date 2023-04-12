@@ -200,8 +200,7 @@ a {
 
 .plp-suggestions {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
 }
 
 .plp-card {
@@ -211,8 +210,9 @@ a {
     border-radius: 4px;
     display: block;
     width: 300px;
-
+    
     h1 {
+        min-height: 120px;
         margin-bottom: 10px;
         padding-top: 20px;
         font-weight: 600;

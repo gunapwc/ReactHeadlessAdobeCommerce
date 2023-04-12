@@ -37,7 +37,7 @@ const authMiddleware = new ApolloLink((operation, forward) => {
   const persistedToken = JSON.parse(window.localStorage.getItem("persist:Catelog")).token;
   if(persistedToken !== "null")
   {
-    token = persistedToken;
+    token = persistedToken.substring(1,(persistedToken.length-1));
   }
   operation.setContext(({ headers = {} }) => ({
     headers: {
